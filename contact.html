@@ -142,8 +142,11 @@ body{ background:#fff; color:#17191A; font-family:'Noto Sans JP',sans-serif; mar
 .radio-group label{ display:flex; align-items:flex-start; gap:8px; font-size:var(--option-size); font-weight:400; margin-bottom:8px; cursor:pointer; }
 .radio-group input{ margin-top:3px; }
 .submit-btn{ width:100%; padding:14px; font-size:15px; font-weight:700; background:#17191A; color:#fff; border:none; border-radius:4px; cursor:pointer; font-family:inherit; }
-.result-msg{ display:none; text-align:center; padding:20px; font-size:14px; }
+.submit-btn:disabled{ opacity:0.6; cursor:default; }
+.result-msg{ display:none; text-align:center; padding:14px; font-size:14px; margin-top:14px; border-radius:4px; }
 .result-msg.show{ display:block; }
+.result-msg.success{ background:#EAF7EA; color:#1B5E20; border:1px solid #A5D6A7; }
+.result-msg.error{ background:#FDECEA; color:#B71C1C; border:1px solid #F5C6CB; }
 </style>
 </head>
 <body>
@@ -151,6 +154,7 @@ body{ background:#fff; color:#17191A; font-family:'Noto Sans JP',sans-serif; mar
   <div class=&quot;heading size-sm&quot;><span class=&quot;sq&quot;></span><span class=&quot;txt&quot;>お問い合わせフォーム</span></div>
 <form id=&quot;contactForm&quot; __gcruniqueid=&quot;1&quot;>
     <input type=&quot;hidden&quot; name=&quot;access_key&quot; id=&quot;accessKeyField&quot; value=&quot;055b114e-3c0a-4208-bc0a-b41b9f76290b&quot;>
+    <input type=&quot;hidden&quot; name=&quot;subject&quot; id=&quot;subjectField&quot; value=&quot;お問い合わせフォームより送信&quot;>
 
     <div class=&quot;field&quot;>
       <label><span class=&quot;txt&quot;>お名前</span> <span class=&quot;req&quot;>必須</span></label>
@@ -172,30 +176,49 @@ body{ background:#fff; color:#17191A; font-family:'Noto Sans JP',sans-serif; mar
       </label>
     </div>
 
-    <button type=&quot;submit&quot; class=&quot;submit-btn&quot;><span class=&quot;txt&quot;>送信する</span></button>
+    <button type=&quot;submit&quot; class=&quot;submit-btn&quot; id=&quot;submitBtn&quot;><span class=&quot;txt&quot; id=&quot;submitBtnText&quot;>送信する</span></button>
     <div class=&quot;result-msg&quot; id=&quot;resultMsg&quot;></div>
   </form>
 </div>
 <script>
+function notifyParentResize(){
+  try{
+    if (window.parent &amp;&amp; window.parent !== window &amp;&amp; window.frameElement &amp;&amp; typeof window.parent.__cardIframeOnload === &quot;function&quot;){
+      window.parent.__cardIframeOnload(window.frameElement);
+    }
+  }catch(e){}
+}
 document.getElementById(&quot;contactForm&quot;).addEventListener(&quot;submit&quot;, function(e){
   e.preventDefault();
   var msg = document.getElementById(&quot;resultMsg&quot;);
+  var btn = document.getElementById(&quot;submitBtn&quot;);
+  var btnText = document.getElementById(&quot;submitBtnText&quot;);
+  var originalText = btnText.textContent;
   var form = e.target;
   var data = new FormData(form);
+  btn.disabled = true;
+  btnText.textContent = &quot;送信中...&quot;;
   fetch(&quot;https://api.web3forms.com/submit&quot;, { method:&quot;POST&quot;, body:data, headers:{&quot;Accept&quot;:&quot;application/json&quot;} })
     .then(function(r){ return r.json(); })
     .then(function(json){
       if(json.success){
         msg.textContent = &quot;お問い合わせありがとうございます。送信が完了しました。&quot;;
+        msg.className = &quot;result-msg show success&quot;;
         form.reset();
       } else {
         msg.textContent = &quot;送信に失敗しました。時間をおいて再度お試しください。&quot;;
+        msg.className = &quot;result-msg show error&quot;;
       }
-      msg.classList.add(&quot;show&quot;);
+      btn.disabled = false;
+      btnText.textContent = originalText;
+      notifyParentResize();
     })
     .catch(function(){
       msg.textContent = &quot;送信に失敗しました。通信環境をご確認の上、再度お試しください。&quot;;
-      msg.classList.add(&quot;show&quot;);
+      msg.className = &quot;result-msg show error&quot;;
+      btn.disabled = false;
+      btnText.textContent = originalText;
+      notifyParentResize();
     });
 });
 </script>
