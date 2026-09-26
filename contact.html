@@ -150,22 +150,29 @@ body{ background:#fff; color:#17191A; font-family:'Noto Sans JP',sans-serif; mar
 <div class=&quot;page size-md&quot;>
   <div class=&quot;heading size-sm&quot;><span class=&quot;sq&quot;></span><span class=&quot;txt&quot;>お問い合わせフォーム</span></div>
 <form id=&quot;contactForm&quot; __gcruniqueid=&quot;1&quot;>
-    <input type=&quot;hidden&quot; name=&quot;access_key&quot; id=&quot;accessKeyField&quot; value=&quot;055b114e-3c0a-4208-bc0a-b41b9f76290b&quot;>
+    <input type=&quot;hidden&quot; name=&quot;access_key&quot; id=&quot;accessKeyField&quot; value=&quot;&quot;>
 
     <div class=&quot;field&quot;>
       <label><span class=&quot;txt&quot;>お名前</span> <span class=&quot;req&quot;>必須</span></label>
-      <input type=&quot;text&quot; name=&quot;お名前&quot; required=&quot;&quot; __gcruniqueid=&quot;2&quot;>
+      <input type=&quot;text&quot; name=&quot;name&quot; required=&quot;&quot; __gcruniqueid=&quot;2&quot;>
     </div>
     <div class=&quot;field&quot;>
       <label><span class=&quot;txt&quot;>メールアドレス</span> <span class=&quot;req&quot;>必須</span></label>
-      <input type=&quot;email&quot; name=&quot;メールアドレス&quot; required=&quot;&quot; __gcruniqueid=&quot;3&quot;>
+      <input type=&quot;email&quot; name=&quot;email&quot; required=&quot;&quot; __gcruniqueid=&quot;3&quot;>
     </div>
     <div class=&quot;field&quot;>
       <label><span class=&quot;txt&quot;>メッセージ</span> <span class=&quot;req&quot;>必須</span></label>
-      <textarea name=&quot;メッセージ&quot; rows=&quot;5&quot; required=&quot;&quot; __gcruniqueid=&quot;4&quot;></textarea>
+      <textarea name=&quot;message&quot; rows=&quot;5&quot; required=&quot;&quot; __gcruniqueid=&quot;4&quot;></textarea>
     </div>
 
-    <button type=&quot;submit&quot; class=&quot;submit-btn&quot;><span class=&quot;txt&quot; onclick=&quot;event.preventDefault()&quot;>送信する</span></button>
+    <div class=&quot;field radio-group&quot;>
+      <label>
+        <input type=&quot;checkbox&quot; name=&quot;consent&quot; required=&quot;&quot;>
+        <span class=&quot;opt-text txt&quot;>ご入力いただいたお名前・メールアドレス・メッセージは、外部サービス(Web3Forms)を経由してお問い合わせへの回答目的のみに使用されます。内容にご同意の上、送信してください。</span>
+      </label>
+    </div>
+
+    <button type=&quot;submit&quot; class=&quot;submit-btn&quot;><span class=&quot;txt&quot;>送信する</span></button>
     <div class=&quot;result-msg&quot; id=&quot;resultMsg&quot;></div>
   </form>
 </div>
@@ -198,7 +205,7 @@ document.getElementById(&quot;contactForm&quot;).addEventListener(&quot;submit&q
 </div></main>
 <footer class="site-footer">
   <nav><a href="top.html">TOP</a> | <a href="page1789636872620.html">CAREER</a> | <a href="career.html">WORKS</a> | <a href="contact.html">CONTACT</a></nav>
-  <div class="sns-row"><a href="https://note.com/keigo_tsuchiya" target="_blank" rel="noopener noreferrer"><img src="images/img_25.jpg" style="height:10px;width:auto;"></a><a href="https://i-roiro.com/index" target="_blank" rel="noopener noreferrer"><img src="images/img_26.jpg" style="height:12px;width:auto;"></a><a href="#" target="_blank" rel="noopener noreferrer"><img src="images/img_27.jpg" style="height:18px;width:auto;"></a></div>
+  <div class="sns-row"><a href="https://note.com/keigo_tsuchiya" target="_blank" rel="noopener noreferrer"><img src="images/img_25.jpg" style="height:10px;width:auto;"></a><a href="https://i-roiro.com/index" target="_blank" rel="noopener noreferrer"><img src="images/img_26.jpg" style="height:12px;width:auto;"></a></div>
   <div>©    KEIGO TSUCHIYA</div>
 </footer>
 </div>
