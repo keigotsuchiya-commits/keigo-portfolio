@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KEIGO TSUCHIYA | Portfolio | CAREER</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{ box-sizing:border-box; }
+body{ background:#FFFFFF; color:#17191A; font-family:'Noto Sans JP',sans-serif; margin:0; padding:0; line-height:1.7; }
+.site-frame{ width:100%; max-width:none; margin:0; }
+.site-header{ display:flex; flex-direction:column; align-items:stretch; padding:16px 20px 8px; font-size:clamp(9px, 2.2vw, 12px); }
+.site-header > div{ line-height:1; }
+.site-header nav{ display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:6px; font-size:clamp(10px, 2.6vw, 14px); margin-top:16px; line-height:1; }
+.site-header nav a{ white-space:nowrap; }
+@media (max-width:480px){ .site-header{ padding:12px 10px 6px; } .site-header nav{ gap:4px; } }
+header a, footer a{ color:#17191A; text-decoration:none; }
+.site-body{ padding:0; }
+.card-list{ display:flex; flex-direction:column; gap:0; }
+.card{ border:1px solid #ddd; overflow:hidden; }
+.card.card-html, .card.card-image{ border:none; min-height:0; height:auto; }
+.card img{ width:100%; max-width:none; height:auto; display:block; }
+.card iframe{ width:100%; border:none; display:block; }
+.site-footer{ padding:16px 20px; text-align:center; font-size:clamp(10px, 2.6vw, 14px); }
+.site-footer nav{ display:flex; justify-content:center; align-items:center; gap:6px; flex-wrap:wrap; padding-bottom:6px; margin-bottom:6px; border-bottom:1px solid #17191A; }
+.site-footer div{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+.sns-row{ display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:6px; }
+.sns-row a{ display:inline-flex; }
+.sns-row img{ display:block; object-fit:contain; }
+</style>
+<script>
+function __cardIframeOnload(iframe){
+  try{
+    var doc = iframe.contentDocument || iframe.contentWindow.document;
+    var BASE_WIDTH = 480, MAX_SCALE = 1.36;
+    var landscape = window.matchMedia && window.matchMedia("(orientation: landscape)").matches;
+    var w = window.innerWidth || document.documentElement.clientWidth || 375;
+    var scale = landscape ? Math.min(MAX_SCALE, Math.max(1, w / BASE_WIDTH)) : 1;
+    var nodes = doc.body ? doc.body.querySelectorAll("*") : [];
+    var i, el, n;
+    for(i=0;i<nodes.length;i++){
+      el = nodes[i];
+      if(/^(IMG|VIDEO|IFRAME|SVG|SCRIPT|STYLE)$/.test(el.tagName)) continue;
+      if(el.dataset.originalFontSize) continue;
+      var hasDirectText = false;
+      for(n=0;n<el.childNodes.length;n++){
+        if(el.childNodes[n].nodeType === 3 && el.childNodes[n].textContent.trim()){ hasDirectText = true; break; }
+      }
+      if(!hasDirectText) continue;
+      el.dataset.originalFontSize = getComputedStyle(el).fontSize;
+    }
+    for(i=0;i<nodes.length;i++){
+      el = nodes[i];
+      if(!el.dataset.originalFontSize) continue;
+      var base = parseFloat(el.dataset.originalFontSize);
+      if(isFinite(base)) el.style.fontSize = (base * scale) + "px";
+    }
+    var prevH = iframe.style.height;
+    iframe.style.height = "0px";
+    var h = (doc.documentElement && doc.documentElement.scrollHeight) || (doc.body && doc.body.scrollHeight) || 0;
+    if(h > 0){ iframe.style.height = h + "px"; } else if(prevH){ iframe.style.height = prevH; }
+    if(!iframe._landscapeBound){
+      iframe._landscapeBound = true;
+      window.addEventListener("resize", function(){ __cardIframeOnload(iframe); });
+      window.addEventListener("orientationchange", function(){ __cardIframeOnload(iframe); });
+    }
+  }catch(e){ if(window.console) console.error("card-html iframe error:", e); }
+}
+</script>
+</head>
+<body>
+<div class="site-frame">
+<header class="site-header">
+  <div>KEIGO TSUCHIYA | Portfolio</div>
+  <nav><a href="top.html">TOP</a> | <a href="page1789636872620.html">CAREER</a> | <a href="career.html">WORKS</a> | <a href="contact.html">CONTACT</a></nav>
+</header>
+<main class="site-body"><div class="card-list">
+    <div class="card card-image" style="margin-bottom:20px;"><img src="images/img_3.png" style="width:100%;height:auto;display:block;"></div>
+    <div class="card card-html" style="margin-bottom:30px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>プロフィール</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>*{box-sizing:border-box;}
+body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;padding:0;line-height:1.7;}
+.page{max-width:600px;margin:0 auto;padding:24px 20px;}
+.page.no-heading,.page.no-lead{padding-top:0;}
+.page.no-heading .lead{margin-top:0;}
+.page.no-lead .heading{padding-top:0;}
+.heading{display:grid;grid-template-columns:1em minmax(0,1fr);align-items:start;column-gap:8px;font-weight:700;font-size:16px;border-bottom:1px solid #17191A;padding:20px 0 3px;margin-bottom:4px;letter-spacing:.01em;}
+.heading.no-border{border-bottom:none;padding-bottom:0;}
+.heading .sq{width:1em;height:1em;background:#8BC34A;display:block;margin-top:.35em;}
+.heading .txt{min-width:0;overflow-wrap:anywhere;}
+.heading.no-sq .sq{display:none;}
+.heading.icon-emoji .sq{background:none;display:flex;align-items:center;justify-content:center;font-size:1em;line-height:1;}
+.heading .txt{font-size:inherit;}
+.heading.size-sm{font-size:13px;}.heading.size-md{font-size:16px;}.heading.size-lg{font-size:20px;}
+.lead{font-weight:700;margin:24px 0 20px;letter-spacing:.01em;}
+.lead.size-xs{font-size:15px;}.lead.size-sm{font-size:18px;}.lead.size-md{font-size:22px;}.lead.size-lg{font-size:27px;}
+.body-wrap{font-size:15px;line-height:1.62;letter-spacing:.01em;}
+.body-wrap p{margin:0 0 20px;}
+.body-wrap p:last-child{margin-bottom:0;}.body-wrap ul,.body-wrap ol{margin:0 0 20px;padding-left:1.5em;}.body-wrap ul{list-style:disc;}.body-wrap ol{list-style:decimal;}.body-wrap li{margin:0 0 12px;display:list-item;}.body-wrap li:last-child{margin-bottom:0;}.body-wrap.line-tight{line-height:1.4;}.body-wrap.line-normal{line-height:1.62;}.body-wrap.line-wide{line-height:2;}
+.body-wrap.size-sm{font-size:12px;}.body-wrap.size-md{font-size:15px;}.body-wrap.size-lg{font-size:18px;}</style>
+</head>
+<body>
+<div class=&quot;page no-heading no-lead&quot;>
+  
+  <div class=&quot;body-wrap size-md line-normal&quot;>
+<p><span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>これまでの略歴と主な実績の一覧です。あわせて受賞歴や特許登録実績も掲載しています。</span></p>
+  </div>
+</div>
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:60px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>経歴</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>
+*{ box-sizing:border-box; }
+body{ background:#fff; color:#17191A; font-family:'Noto Sans JP',sans-serif; margin:0; padding:0; line-height:1.7; }
+.page{ max-width:600px; margin:0 auto; padding:24px 20px; }
+.heading{ display:flex; align-items:center; gap:8px; font-weight:700; border-bottom:1px solid #17191A; padding:20px 0 3px; margin-bottom:4px; }
+.heading .sq{ width:14px; height:14px; background:#8BC34A; flex-shrink:0; }
+.heading .txt.size-sm{ font-size:13px; } .heading .txt.size-md{ font-size:16px; } .heading .txt.size-lg{ font-size:20px; }
+.row{ display:flex; gap:8px; padding:12px 0; flex-wrap:wrap; }
+.row + .row{ border-top:1px dotted #5B615F; }
+.row:last-child{ border-bottom:1px solid #17191A; }
+.row .date{ flex-shrink:0; width:6.5em; white-space:nowrap; }
+.row .event{ flex:1; min-width:180px; }
+.date.size-sm, .event.size-sm{ font-size:12px; } .date.size-md, .event.size-md{ font-size:15px; } .date.size-lg, .event.size-lg{ font-size:18px; }
+</style>
+</head>
+<body>
+<div class=&quot;page&quot;>
+  <div class=&quot;heading&quot;><span class=&quot;sq&quot;></span><span class=&quot;txt size-sm&quot;>経歴</span></div>
+  <div class=&quot;row&quot;>
+    <div class=&quot;date size-md&quot;>1994年4月</div>
+    <div class=&quot;event size-md&quot;>東京藝術大学 美術学部デザイン科 入学</div>
+  </div>
+  <div class=&quot;row&quot;>
+    <div class=&quot;date size-md&quot;>1999年3月</div>
+    <div class=&quot;event size-md&quot;>東京藝術大学 美術学部デザイン科 卒業</div>
+  </div>
+  <div class=&quot;row&quot;>
+    <div class=&quot;date size-md&quot;>1999年4月</div>
+    <div class=&quot;event size-md&quot;>株式会社ソニー・コンピュータエンタテインメント 入社（現 ソニー・インタラクティブエンタテインメント）</div>
+  </div>
+  <div class=&quot;row&quot;>
+    <div class=&quot;date size-md&quot;>2000年12月</div>
+    <div class=&quot;event size-md&quot;>株式会社ソニー・コンピュータエンタテインメント 退職</div>
+  </div>
+  <div class=&quot;row&quot;>
+    <div class=&quot;date size-md&quot;>2001年3月</div>
+    <div class=&quot;event size-md&quot;>個人事業主として活動（広告・チラシなどのデザイン/webデザイン/ゲーム制作のコンセプトアート・アートディレクション/パチンコ制作のディレクション・アートディレクションなど）</div>
+  </div>
+  <div class=&quot;row&quot;>
+    <div class=&quot;date size-md&quot;>2008年3月</div>
+    <div class=&quot;event size-md&quot;>個人事業主としての活動停止</div>
+  </div>
+  <div class=&quot;row&quot;>
+    <div class=&quot;date size-md&quot;>2008年4月</div>
+    <div class=&quot;event size-md&quot;>株式会社ソニー・コンピュータエンタテインメント 入社（現 ソニー・インタラクティブエンタテインメント）</div>
+  </div>
+  <div class=&quot;row&quot;>
+    <div class=&quot;date size-md&quot;>2020年12月</div>
+    <div class=&quot;event size-md&quot;>株式会社ソニー・インタラクティブエンタテインメント 退職</div>
+  </div>
+  <div class=&quot;row&quot;>
+    <div class=&quot;date size-md&quot;>2022年5月</div>
+    <div class=&quot;event size-md&quot;>株式会社ラセングル 入社</div>
+  </div>
+  <div class=&quot;row&quot;>
+    <div class=&quot;date size-md&quot;>2026年9月</div>
+    <div class=&quot;event size-md&quot;>株式会社ラセングル 退職</div>
+  </div>
+</div>
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:0px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>プロフィール</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>*{box-sizing:border-box;}
+body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;padding:0;line-height:1.7;}
+.page{max-width:600px;margin:0 auto;padding:24px 20px;}
+.heading{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;border-bottom:1px solid #17191A;padding:20px 0 3px;margin-bottom:4px;letter-spacing:.01em;}
+.heading.no-border{border-bottom:none;padding-bottom:0;}
+.heading .sq{width:1em;height:1em;background:#8BC34A;flex-shrink:0;}
+.heading.no-sq .sq{display:none;}
+.heading .txt{font-size:inherit;}
+.heading.size-sm{font-size:13px;}.heading.size-md{font-size:16px;}.heading.size-lg{font-size:20px;}
+.lead{font-weight:700;margin:24px 0 20px;letter-spacing:.01em;}
+.lead.size-xs{font-size:15px;}.lead.size-sm{font-size:18px;}.lead.size-md{font-size:22px;}.lead.size-lg{font-size:27px;}
+.body-wrap{font-size:15px;line-height:1.62;letter-spacing:.01em;}
+.body-wrap p{margin:0 0 20px;}
+.body-wrap p:last-child{margin-bottom:0;}.body-wrap ul{margin:0 0 20px;padding-left:1.5em;list-style:disc;}.body-wrap li{margin:0;display:list-item;}.body-wrap.line-tight{line-height:1.4;}.body-wrap.line-normal{line-height:1.62;}.body-wrap.line-wide{line-height:2;}
+.body-wrap.size-sm{font-size:12px;}.body-wrap.size-md{font-size:15px;}.body-wrap.size-lg{font-size:18px;}
+.text-bold { font-weight: bold; }
+.text-size-lg { font-size: 1.25em; }
+.text-size-sm { font-size: 0.85em; }</style>
+</head>
+<body>
+<div class=&quot;page&quot;>
+  <div class=&quot;heading size-sm&quot;><span class=&quot;sq&quot;></span><span class=&quot;txt&quot;>WORKS / ACHIEVEMENTS ｜ 実績</span></div>
+  <div class=&quot;body-wrap line-normal size-sm line-normal&quot;>
+<p></p>
+  </div>
+</div>
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:40px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>KEIGO TSUCHIYA | Career</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>
+  /* 見出し：下線を削除し、直下の表との間隔を調整 */
+  :root{ --bg:#FFFFFF; --text:#17191A; --text-muted:#5B615F; --toolbar-bg:#F4F4F2; --light-line:rgba(23,25,26,0.2); }
+  *{ box-sizing:border-box; }
+  body{ background:var(--bg); color:var(--text); font-family:'Noto Sans JP',sans-serif; margin:0; padding:0; line-height:1.7; }
+
+  .toolbar{ position:sticky; top:0; background:var(--toolbar-bg); border-bottom:1px solid var(--text); padding:12px 16px; display:flex; gap:8px; flex-wrap:wrap; align-items:center; z-index:20; }
+  .toolbar button{ font-family:inherit; font-size:12px; padding:7px 12px; border:1px solid var(--text); background:#fff; border-radius:4px; cursor:pointer; }
+  .toolbar button:hover{ background:var(--text); color:#fff; }
+  .toolbar button.primary{ background:var(--text); color:#fff; }
+  .toolbar .sep{ width:1px; height:20px; background:var(--text-muted); opacity:0.3; margin:0 4px; }
+  .toolbar .hint{ font-size:11px; color:var(--text-muted); width:100%; }
+  .toolbar .lbl{ font-size:11px; }
+
+  .page{ max-width:560px; margin:0 auto; padding:20px 20px 100px; }
+
+  .heading{ font-weight:700; border-bottom:none; padding:10px 0 4px; margin:28px 0 6px; outline:none; }
+  .heading.first{ margin-top:0; }
+  .heading.size-sm{ font-size:13px; }
+  .heading.size-md{ font-size:15px; }
+  .heading.size-lg{ font-size:18px; }
+
+  .table{ border:1px solid var(--text); border-bottom:none; margin-bottom:20px; overflow:hidden; }
+  .group-row{ display:flex; border-bottom:1px solid var(--text); width:100%; }
+  .year{ width:7.5em; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; padding:12px 8px; border-right:1px solid var(--text); outline:none; text-align:center; white-space:nowrap; }
+  .items{ flex:1; min-width:0; }
+  .item{ padding:12px 16px; }
+  .item-wrap + .item-wrap{ border-top:1px solid var(--text); }
+  .item + .item{ border-top:1px solid var(--text); }
+  .title{ font-size:15px; font-weight:700; margin-bottom:4px; outline:none; min-height:1.4em; overflow-wrap:break-word; word-break:break-word; }
+  .desc{ font-size:13px; color:var(--text-muted); outline:none; min-height:1.4em; overflow-wrap:break-word; word-break:break-word; }
+
+  .align-left{ text-align:left; }
+  .align-center{ text-align:center; }
+  .align-right{ text-align:right; }
+  .size-sm{ font-size:12px; }
+  .size-md{ font-size:15px; }
+  .size-lg{ font-size:18px; }
+  .year.size-sm{ font-size:11px; }
+  .year.size-md{ font-size:13px; }
+  .year.size-lg{ font-size:16px; }
+  .desc.size-sm{ font-size:12px; }
+  .desc.size-md{ font-size:14px; }
+  .desc.size-lg{ font-size:16px; }
+
+  </style>
+</head>
+<body>
+<div class=&quot;page&quot;>
+  <div class=&quot;heading first size-sm&quot;>■ ソニー・インタラクティブエンタテインメント JAPAN Studioでの実績(1998-2000 / 2004-2020)</div>
+  <div class=&quot;table&quot;>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>1998-2000</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>Playstation®「レジェンドオブドラグーン」</div>
+        <div class=&quot;desc size-sm&quot;>背景イメージボード・エフェクト作成・背景レタッチ・アイテムデザインなど</div>
+      </div>
+    </div>
+  </div>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>2004</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>Playstation®2 EyeToy USBカメラ専用「サルアイトーイ大騒ぎ!ウッキウキゲームてんこもり!!」</div>
+        <div class=&quot;desc size-sm&quot;>プロモーション用のイラスト・PC用壁紙のデザイン・ローカライズ用のテクスチャ作成</div>
+      </div>
+    </div>
+  </div>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>2004-2006</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>PSP®「LocoRoco®」</div>
+        <div class=&quot;desc size-sm&quot;>企画・アートディレクション・コンセプトアート・各デザイン・パブ素材のデザインなど。2006年、英国アカデミー賞BAFTA Video Game Awardsキャラクター部門を受賞。</div>
+      </div>
+    </div>
+  </div>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>2006-2007</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>Playstation®3「おいでよロコロコ!! Buu Buu Cocoreccho!」</div>
+        <div class=&quot;desc size-sm&quot;>企画・アートディレクション・コンセプトアート・各デザイン・パブ素材のデザインなど</div>
+      </div>
+    </div>
+  </div>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>2007-2008</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>PSP®「LocoRoco®2」</div>
+        <div class=&quot;desc size-sm&quot;>アートディレクション・コンセプトアート・各デザイン・パブ素材のデザインなど</div>
+      </div>
+    </div>
+  </div>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>2008-2009</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>Playstation® Home パーソナルスペース「Loco Island」</div>
+        <div class=&quot;desc size-sm&quot;>アートディレクション・パブ素材のデザインなど</div>
+      </div>
+    </div>
+  </div>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>2008-2009</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>PSP®go「LocoRoco® -Midnight Carnival-」</div>
+        <div class=&quot;desc size-sm&quot;>監修</div>
+      </div>
+    </div>
+  </div>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>2009-2010</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>Playstation® Home ラウンジ「ムイムイ客船」、追加コンテンツ</div>
+        <div class=&quot;desc size-sm&quot;>アートディレクション・パブ素材のデザインなど</div>
+      </div>
+    </div>
+  </div>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>2010-2013</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>Playstation® VITA向けアプリ「near」</div>
+        <div class=&quot;desc size-sm&quot;>アートディレクション・コンセプトアート・各レイアウトデザイン・アセット実装など</div>
+      </div>
+    </div>
+  </div>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>2013</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>Playstation®Store キャンペーン企画「MONSTER GAMERS Vol.2」</div>
+        <div class=&quot;desc size-sm&quot;>描き下ろしイラストの提供</div>
+      </div>
+    </div>
+  </div>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>2013-2014</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>新人研修</div>
+        <div class=&quot;desc size-sm&quot;>新人研修メンバー6名(本人、チューター2名、新人3名)。研修全体のディレクション・課題の設定・レポート資料の作成など</div>
+      </div>
+    </div>
+  </div>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>2014</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>Playstation® VITA「Destiny of Spirits™:Asia」</div>
+        <div class=&quot;desc size-sm&quot;>描き下ろしイラスト2点の提供</div>
+      </div>
+    </div>
+  </div>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>2016-2017</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>Playstation®4 HDリマスター版「LocoRoco®」</div>
+        <div class=&quot;desc size-sm&quot;>監修・4K対応テクスチャ作成・4K対応ムービー作成・パブ素材のデザインなど</div>
+      </div>
+    </div>
+  </div>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>2017</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>YouTube JAPAN Studio Official「Jスタ News」</div>
+        <div class=&quot;desc size-sm&quot;>ロゴデザイン・アニメーション用に表情のバリエーションデザインなど</div>
+      </div>
+    </div>
+  </div>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>2017-2018</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>Playstation®4 HDリマスター版「LocoRoco®2」</div>
+        <div class=&quot;desc size-sm&quot;>監修・4K対応テクスチャ作成・トロフィー素材デザイン・パブ素材のデザインなど</div>
+      </div>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>Playstation®4 HDリマスター版「LocoRoco®」中国本土版対応</div>
+        <div class=&quot;desc size-sm&quot;>監修・中国本土版対応テクスチャの作成(タイトル画面・ロゴデザイン)など</div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class=&quot;heading size-sm&quot;>■ 株式会社ラセングルでの実績( 2022-2026 )</div>
+  <div class=&quot;table&quot;>
+  <div class=&quot;group-row&quot;>
+    <div class=&quot;year align-center size-sm&quot;>2022-2026</div>
+    <div class=&quot;items&quot;>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>Fate/Grand Order</div>
+        <div class=&quot;desc size-sm&quot;>マップ班にてアート素材制作業務を担当</div>
+      </div>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>新規プロジェクト(非公開)</div>
+        <div class=&quot;desc size-sm&quot;>アートディレクターとしてアサイン。</div>
+      </div>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>新規プロジェクト(非公開)</div>
+        <div class=&quot;desc size-sm&quot;>エネミーアート リードとしてアサイン。コンセプトアート、3Dモデルのフィードバックなどを担当</div>
+      </div>
+      <div class=&quot;item&quot;>
+        <div class=&quot;title size-sm&quot;>社内向け画力向上カリキュラムの設計</div>
+        <div class=&quot;desc size-sm&quot;></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:20px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>プロフィール</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>*{box-sizing:border-box;}
+body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;padding:0;line-height:1.7;}
+.page{max-width:600px;margin:0 auto;padding:24px 20px;}
+.page.no-heading,.page.no-lead{padding-top:0;}
+.page.no-heading .lead{margin-top:0;}
+.page.no-lead .heading{padding-top:0;}
+.heading{display:grid;grid-template-columns:1em minmax(0,1fr);align-items:start;column-gap:8px;font-weight:700;font-size:16px;border-bottom:1px solid #17191A;padding:20px 0 3px;margin-bottom:4px;letter-spacing:.01em;}
+.heading.no-border{border-bottom:none;padding-bottom:0;}
+.heading .sq{width:1em;height:1em;background:#8bc34a;display:block;margin-top:.35em;}
+.heading .txt{min-width:0;overflow-wrap:anywhere;}
+.heading.no-sq .sq{display:none;}
+.heading.icon-emoji .sq{background:none;display:flex;align-items:center;justify-content:center;font-size:1em;line-height:1;}
+.heading .txt{font-size:inherit;}
+.heading.size-sm{font-size:13px;}.heading.size-md{font-size:16px;}.heading.size-lg{font-size:20px;}
+.lead{font-weight:700;margin:24px 0 20px;letter-spacing:.01em;}
+.lead.size-xs{font-size:15px;}.lead.size-sm{font-size:18px;}.lead.size-md{font-size:22px;}.lead.size-lg{font-size:27px;}
+.body-wrap{font-size:15px;line-height:1.62;letter-spacing:.01em;}
+.body-wrap p{margin:0 0 20px;}
+.body-wrap p:last-child{margin-bottom:0;}.body-wrap ul,.body-wrap ol{margin:0 0 20px;padding-left:1.5em;}.body-wrap ul{list-style:disc;}.body-wrap ol{list-style:decimal;}.body-wrap li{margin:0 0 12px;display:list-item;}.body-wrap li:last-child{margin-bottom:0;}.body-wrap.line-tight{line-height:1.4;}.body-wrap.line-normal{line-height:1.62;}.body-wrap.line-wide{line-height:2;}
+.body-wrap.size-sm{font-size:12px;}.body-wrap.size-md{font-size:15px;}.body-wrap.size-lg{font-size:18px;}</style>
+</head>
+<body>
+<div class=&quot;page&quot;>
+  <div class=&quot;heading size-sm&quot;><span class=&quot;sq&quot; aria-hidden=&quot;true&quot;></span><span class=&quot;txt&quot;>AWARDS ｜ 主な受賞歴</span></div>
+  <div class=&quot;lead size-xs&quot;>LocoRoco（Art Director）</div>
+  <div class=&quot;body-wrap size-md line-normal line-normal&quot;>
+<p></p><div><span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>国内</span><br></div><div><ul><li><span style=&quot;-webkit-text-size-adjust: 100%;&quot;>GAME AWARDS FUTURE 2005 フューチャー賞</span></li><li><span style=&quot;-webkit-text-size-adjust: 100%;&quot;>第10回 文化庁メディア芸術祭 エンターテインメント部門 審査委員会推薦作品 選出</span></li></ul><span style=&quot;-webkit-text-size-adjust: 100%; font-family: inherit;&quot;>海外</span><br><ul><li><span style=&quot;-webkit-text-size-adjust: 100%;&quot;>BAFTA Games Awards 2006 Children's Game賞</span></li><li><span style=&quot;-webkit-text-size-adjust: 100%;&quot;>BAFTA Games Awards 2006 Character賞&amp;nbsp;</span></li><li><span style=&quot;-webkit-text-size-adjust: 100%;&quot;>GDC Awards 2007 Best Handheld Game賞</span></li><li><span style=&quot;-webkit-text-size-adjust: 100%;&quot;>D.I.C.E. Awards 2007 Children's Game of the Year</span></li><li><span style=&quot;-webkit-text-size-adjust: 100%;&quot;>D.I.C.E. Awards 2007 作編曲賞</span></li><li><span style=&quot;-webkit-text-size-adjust: 100%; font-family: inherit;&quot;>その他、BAFTA Artistic Achievement（美術部門）ノミネートなど</span></li></ul></div><p></p>
+  </div>
+</div>
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:16px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>プロフィール</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>*{box-sizing:border-box;}
+body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;padding:0;line-height:1.7;}
+.page{max-width:600px;margin:0 auto;padding:24px 20px;}
+.page.no-heading,.page.no-lead{padding-top:0;}
+.page.no-heading .lead{margin-top:0;}
+.page.no-lead .heading{padding-top:0;}
+.heading{display:grid;grid-template-columns:1em minmax(0,1fr);align-items:start;column-gap:8px;font-weight:700;font-size:16px;border-bottom:1px solid #17191A;padding:20px 0 3px;margin-bottom:4px;letter-spacing:.01em;}
+.heading.no-border{border-bottom:none;padding-bottom:0;}
+.heading .sq{width:1em;height:1em;background:#8bc34a;display:block;margin-top:.35em;}
+.heading .txt{min-width:0;overflow-wrap:anywhere;}
+.heading.no-sq .sq{display:none;}
+.heading.icon-emoji .sq{background:none;display:flex;align-items:center;justify-content:center;font-size:1em;line-height:1;}
+.heading .txt{font-size:inherit;}
+.heading.size-sm{font-size:13px;}.heading.size-md{font-size:16px;}.heading.size-lg{font-size:20px;}
+.lead{font-weight:700;margin:24px 0 20px;letter-spacing:.01em;}
+.lead.size-xs{font-size:15px;}.lead.size-sm{font-size:18px;}.lead.size-md{font-size:22px;}.lead.size-lg{font-size:27px;}
+.body-wrap{font-size:15px;line-height:1.62;letter-spacing:.01em;}
+.body-wrap p{margin:0 0 20px;}
+.body-wrap p:last-child{margin-bottom:0;}.body-wrap ul,.body-wrap ol{margin:0 0 20px;padding-left:1.5em;}.body-wrap ul{list-style:disc;}.body-wrap ol{list-style:decimal;}.body-wrap li{margin:0 0 12px;display:list-item;}.body-wrap li:last-child{margin-bottom:0;}.body-wrap.line-tight{line-height:1.4;}.body-wrap.line-normal{line-height:1.62;}.body-wrap.line-wide{line-height:2;}
+.body-wrap.size-sm{font-size:12px;}.body-wrap.size-md{font-size:15px;}.body-wrap.size-lg{font-size:18px;}</style>
+</head>
+<body>
+<div class=&quot;page no-lead&quot;>
+  <div class=&quot;heading size-sm&quot;><span class=&quot;sq&quot; aria-hidden=&quot;true&quot;></span><span class=&quot;txt&quot;>PATENTS ｜ 特許登録実績</span></div>
+  <div class=&quot;body-wrap size-md line-normal line-normal&quot;>
+<p></p><div><ul><li><span style=&quot;-webkit-text-size-adjust: 100%;&quot;>特許第6113134号 :&amp;nbsp;</span><span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>位置情報連動型データ通信システム</span><span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>（共同発明者 / 特許権者：株式会社ソニー・インタラクティブエンタテインメント）</span></li><li><span style=&quot;-webkit-text-size-adjust: 100%;&quot;>特許第6022491号：時系列測位データの動的表示制御アルゴリズム</span><span style=&quot;-webkit-text-size-adjust: 100%; font-family: inherit;&quot;>（共同発明者 / 特許権者：株式会社ソニー・インタラクティブエンタテインメント）</span></li></ul></div><p></p>
+  </div>
+</div>
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+</div></main>
+<footer class="site-footer">
+  <nav><a href="top.html">TOP</a> | <a href="page1789636872620.html">CAREER</a> | <a href="career.html">WORKS</a> | <a href="contact.html">CONTACT</a></nav>
+  <div class="sns-row"><a href="https://note.com/keigo_tsuchiya" target="_blank" rel="noopener noreferrer"><img src="images/img_25.jpg" style="height:10px;width:auto;"></a><a href="https://i-roiro.com/index" target="_blank" rel="noopener noreferrer"><img src="images/img_26.jpg" style="height:12px;width:auto;"></a><a href="#" target="_blank" rel="noopener noreferrer"><img src="images/img_27.jpg" style="height:18px;width:auto;"></a></div>
+  <div>©    KEIGO TSUCHIYA</div>
+</footer>
+</div>
+</body>
+</html>

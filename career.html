@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KEIGO TSUCHIYA | Portfolio | WORKS</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{ box-sizing:border-box; }
+body{ background:#FFFFFF; color:#17191A; font-family:'Noto Sans JP',sans-serif; margin:0; padding:0; line-height:1.7; }
+.site-frame{ width:100%; max-width:none; margin:0; }
+.site-header{ display:flex; flex-direction:column; align-items:stretch; padding:16px 20px 8px; font-size:clamp(9px, 2.2vw, 12px); }
+.site-header > div{ line-height:1; }
+.site-header nav{ display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:6px; font-size:clamp(10px, 2.6vw, 14px); margin-top:16px; line-height:1; }
+.site-header nav a{ white-space:nowrap; }
+@media (max-width:480px){ .site-header{ padding:12px 10px 6px; } .site-header nav{ gap:4px; } }
+header a, footer a{ color:#17191A; text-decoration:none; }
+.site-body{ padding:0; }
+.card-list{ display:flex; flex-direction:column; gap:0; }
+.card{ border:1px solid #ddd; overflow:hidden; }
+.card.card-html, .card.card-image{ border:none; min-height:0; height:auto; }
+.card img{ width:100%; max-width:none; height:auto; display:block; }
+.card iframe{ width:100%; border:none; display:block; }
+.site-footer{ padding:16px 20px; text-align:center; font-size:clamp(10px, 2.6vw, 14px); }
+.site-footer nav{ display:flex; justify-content:center; align-items:center; gap:6px; flex-wrap:wrap; padding-bottom:6px; margin-bottom:6px; border-bottom:1px solid #17191A; }
+.site-footer div{ -webkit-text-size-adjust:100%; text-size-adjust:100%; }
+.sns-row{ display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:6px; }
+.sns-row a{ display:inline-flex; }
+.sns-row img{ display:block; object-fit:contain; }
+</style>
+<script>
+function __cardIframeOnload(iframe){
+  try{
+    var doc = iframe.contentDocument || iframe.contentWindow.document;
+    var BASE_WIDTH = 480, MAX_SCALE = 1.36;
+    var landscape = window.matchMedia && window.matchMedia("(orientation: landscape)").matches;
+    var w = window.innerWidth || document.documentElement.clientWidth || 375;
+    var scale = landscape ? Math.min(MAX_SCALE, Math.max(1, w / BASE_WIDTH)) : 1;
+    var nodes = doc.body ? doc.body.querySelectorAll("*") : [];
+    var i, el, n;
+    for(i=0;i<nodes.length;i++){
+      el = nodes[i];
+      if(/^(IMG|VIDEO|IFRAME|SVG|SCRIPT|STYLE)$/.test(el.tagName)) continue;
+      if(el.dataset.originalFontSize) continue;
+      var hasDirectText = false;
+      for(n=0;n<el.childNodes.length;n++){
+        if(el.childNodes[n].nodeType === 3 && el.childNodes[n].textContent.trim()){ hasDirectText = true; break; }
+      }
+      if(!hasDirectText) continue;
+      el.dataset.originalFontSize = getComputedStyle(el).fontSize;
+    }
+    for(i=0;i<nodes.length;i++){
+      el = nodes[i];
+      if(!el.dataset.originalFontSize) continue;
+      var base = parseFloat(el.dataset.originalFontSize);
+      if(isFinite(base)) el.style.fontSize = (base * scale) + "px";
+    }
+    var prevH = iframe.style.height;
+    iframe.style.height = "0px";
+    var h = (doc.documentElement && doc.documentElement.scrollHeight) || (doc.body && doc.body.scrollHeight) || 0;
+    if(h > 0){ iframe.style.height = h + "px"; } else if(prevH){ iframe.style.height = prevH; }
+    if(!iframe._landscapeBound){
+      iframe._landscapeBound = true;
+      window.addEventListener("resize", function(){ __cardIframeOnload(iframe); });
+      window.addEventListener("orientationchange", function(){ __cardIframeOnload(iframe); });
+    }
+  }catch(e){ if(window.console) console.error("card-html iframe error:", e); }
+}
+</script>
+</head>
+<body>
+<div class="site-frame">
+<header class="site-header">
+  <div>KEIGO TSUCHIYA | Portfolio</div>
+  <nav><a href="top.html">TOP</a> | <a href="page1789636872620.html">CAREER</a> | <a href="career.html">WORKS</a> | <a href="contact.html">CONTACT</a></nav>
+</header>
+<main class="site-body"><div class="card-list">
+    <div class="card card-image" style="margin-bottom:20px;"><img src="images/img_4.png" style="width:100%;height:auto;display:block;"></div>
+    <div class="card card-html" style="margin-bottom:16px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>プロフィール</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>*{box-sizing:border-box;}
+body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;padding:0;line-height:1.7;}
+.page{max-width:600px;margin:0 auto;padding:24px 20px;}
+.heading{display:grid;grid-template-columns:1em minmax(0,1fr);align-items:start;column-gap:8px;font-weight:700;font-size:16px;border-bottom:1px solid #17191A;padding:20px 0 3px;margin-bottom:4px;letter-spacing:.01em;}
+.heading.no-border{border-bottom:none;padding-bottom:0;}
+.heading .sq{width:1em;height:1em;background:#8BC34A;display:block;margin-top:.35em;}
+.heading .txt{min-width:0;overflow-wrap:anywhere;}
+.heading.no-sq .sq{display:none;}
+.heading .txt{font-size:inherit;}
+.heading.size-sm{font-size:13px;}.heading.size-md{font-size:16px;}.heading.size-lg{font-size:20px;}
+.lead{font-weight:700;margin:24px 0 20px;letter-spacing:.01em;}
+.lead.size-xs{font-size:15px;}.lead.size-sm{font-size:18px;}.lead.size-md{font-size:22px;}.lead.size-lg{font-size:27px;}
+.body-wrap{font-size:15px;line-height:1.62;letter-spacing:.01em;}
+.body-wrap p{margin:0 0 20px;}
+.body-wrap p:last-child{margin-bottom:0;}.body-wrap ul,.body-wrap ol{margin:0 0 20px;padding-left:1.5em;}.body-wrap ul{list-style:disc;}.body-wrap ol{list-style:decimal;}.body-wrap li{margin:0 0 12px;display:list-item;}.body-wrap li:last-child{margin-bottom:0;}.body-wrap.line-tight{line-height:1.4;}.body-wrap.line-normal{line-height:1.62;}.body-wrap.line-wide{line-height:2;}
+.body-wrap.size-sm{font-size:12px;}.body-wrap.size-md{font-size:15px;}.body-wrap.size-lg{font-size:18px;}</style>
+</head>
+<body>
+<div class=&quot;page&quot;>
+  
+  <div class=&quot;body-wrap size-md line-normal line-normal&quot;>
+<p>これまでに手掛けた実績から主なビジュアルを抜粋して掲載しています。過去のアウトプットを一覧でご確認いただけます。</p>
+  </div>
+</div>
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:0px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>プロフィール</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>*{box-sizing:border-box;}
+body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;padding:0;line-height:1.7;}
+.page{max-width:600px;margin:0 auto;padding:24px 20px;}
+.heading{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;border-bottom:1px solid #17191A;padding:20px 0 3px;margin-bottom:4px;letter-spacing:.01em;}
+.heading.no-border{border-bottom:none;padding-bottom:0;}
+.heading .sq{width:1em;height:1em;background:#8BC34A;flex-shrink:0;}
+.heading.no-sq .sq{display:none;}
+.heading .txt{font-size:inherit;}
+.heading.size-sm{font-size:13px;}.heading.size-md{font-size:16px;}.heading.size-lg{font-size:20px;}
+.lead{font-weight:700;margin:24px 0 20px;letter-spacing:.01em;}
+.lead.size-xs{font-size:15px;}.lead.size-sm{font-size:18px;}.lead.size-md{font-size:22px;}.lead.size-lg{font-size:27px;}
+.body-wrap{font-size:15px;line-height:1.62;letter-spacing:.01em;}
+.body-wrap p{margin:0 0 20px;}
+.body-wrap p:last-child{margin-bottom:0;}.body-wrap ul,.body-wrap ol{margin:0 0 20px;padding-left:1.5em;}.body-wrap ul{list-style:disc;}.body-wrap ol{list-style:decimal;}.body-wrap li{margin:0 0 12px;display:list-item;}.body-wrap li:last-child{margin-bottom:0;}.body-wrap.line-tight{line-height:1.4;}.body-wrap.line-normal{line-height:1.62;}.body-wrap.line-wide{line-height:2;}
+.body-wrap.size-sm{font-size:12px;}.body-wrap.size-md{font-size:15px;}.body-wrap.size-lg{font-size:18px;}</style>
+</head>
+<body>
+<div class=&quot;page&quot;>
+  <div class=&quot;heading size-sm&quot;><span class=&quot;sq&quot;></span><span class=&quot;txt&quot;>「LocoRoco®」シリーズ</span></div>
+  <div class=&quot;body-wrap size-md line-normal line-normal&quot;>
+<p>「LocoRoco®」は、プロジェクト化される前からディレクターの河野力氏と共に、毎日ブレストを重ねながら作り上<span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>げたタイトルです。世界中の人たちに手に取ってもらうことを想像し、毎日ワクワクしながら制作に励んでいました。</span></p><p>ゲーム制作内のほぼ全てのビジュアルデザインを描き、ゲーム内だけでなくパッケージ、解説書、広告、 CD ジャケッ<span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>トや、ブックレット、さまざまな商品のデザインから DTP データまで自分で作成してしまったタイトルでもあります。</span></p>
+  </div>
+</div>
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:0px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>image-text-block</title>
+</head>
+<body style=&quot;margin:0;padding:0;background:#fff;&quot;>
+<style>
+.ittbrfiv.it-wrap{width:100vw;position:relative;left:50%;right:50%;margin-left:-50vw;margin-right:-50vw;}
+.ittbrfiv .it-frame-outer{box-sizing:border-box;}
+.ittbrfiv .it-block{width:100%;box-sizing:border-box;padding:10px 24px 10px 24px;display:flex;align-items:center;gap:clamp(14px,2.9cqw,30px);font-family:&quot;Hiragino Sans&quot;,&quot;Noto Sans JP&quot;,sans-serif;}
+.ittbrfiv .it-block.it-right{flex-direction:row-reverse;}
+.ittbrfiv .it-block.it-none{display:block;}
+.ittbrfiv .it-img{flex:0 0 38%;max-width:38%;}
+.ittbrfiv .it-img img{display:block;width:100%;height:auto;}
+.ittbrfiv .it-text{flex:1;min-width:0;}
+.ittbrfiv .it-text p, .ittbrfiv .it-text > div{margin:0;font-size:14px;line-height:1.8;color:#111;white-space:pre-wrap;}
+.ittbrfiv .it-text .it-line{margin:0;white-space:pre-wrap;}
+.ittbrfiv .it-text p.it-sig{display:block;text-align:right;margin:0!important;padding:0!important;border:0!important;line-height:1!important;white-space:normal;}
+.ittbrfiv .it-sig-wrap{display:block;text-align:right;line-height:0;font-size:0;}
+.ittbrfiv .it-sig-wrap .it-sig-img{display:inline-block;height:auto;margin-top:0.4em;}
+</style>
+
+<div class=&quot;it-wrap ittbrfiv&quot;>
+  <div class=&quot;it-frame-outer&quot;>
+    <div class=&quot;it-block it-none&quot; style=&quot;&quot;>
+      <div class=&quot;it-text&quot;><div style=&quot;font-size:14px;line-height:1.8&quot;><div class=&quot;it-line&quot;><strong>▼記事</strong></div><div class=&quot;it-line&quot;><a href=&quot;https://blog.ja.playstation.com/2017/05/09/20170509-locoroco/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>2017 PlayStation® 4 HD リマスター版の発売当時のインタビュー</a></div></div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:30px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>カルーセル</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>
+*{ box-sizing:border-box; }
+body{ background:#fff; color:#17191A; font-family:'Noto Sans JP',sans-serif; margin:0; padding:0; line-height:1.7; }
+.page{ max-width:600px; margin:0 auto; padding:24px 20px; }
+.carousel .slide{ display:none; }
+.carousel .slide.active{ display:block; }
+.carousel .slide img{ width:100%; height:auto; display:block; }
+.carousel .slide .credit{ text-align:right; padding:4px 8px 0; color:#5B615F; }
+.carousel .slide .text{ font-size:15px; line-height:1.7; padding:6px 8px 0; }
+.carousel .slide .text p{ margin:0 0 16px; }
+.carousel .slide .text p:last-child{ margin-bottom:0; }
+.carousel .slide .text.align-center{ text-align:center; padding-left:0; padding-right:0; }
+.carousel-nav{ display:flex; align-items:center; justify-content:center; gap:20px; padding-top:16px; }
+.carousel-nav button{ font-family:inherit; font-size:18px; width:36px; height:36px; border:1px solid #17191A; background:#fff; border-radius:50%; cursor:pointer; }
+.carousel-nav .counter{ font-size:13px; color:#5B615F; min-width:48px; text-align:center; display:inline-block; }
+</style>
+</head>
+<body>
+<div class=&quot;page&quot;>
+<div class=&quot;carousel&quot;>
+<div id=&quot;carouselSlides&quot;>
+  <div class=&quot;slide active&quot;><img src=&quot;images/img_5.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;><p>プラットフォーム：PSP®
+・PlayStation® 3・PlayStation® 4 ・PlayStation® Home</p></div></div>
+  <div class=&quot;slide&quot;><img src=&quot;images/img_6.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;><p>初期の段階では柔らかさを表現したいため、表面的に素材感のあるビジュアルで検討していました。ある時、「いっそのこと、スーパーフラットな表現にすれば、NURBS で描かれたロコロコの輪郭の変化を素直に見せることができるし、一番柔らかさを表現できるかも！」と閃き、方針を決定しました。その後は、微調整を重ね、最終的なビジュアルになっていきました。</p></div></div>
+  <div class=&quot;slide&quot;><img src=&quot;images/img_7.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;><p>スーパーフラットになる前の、ロコロコのデザイン案</p></div></div>
+  <div class=&quot;slide&quot;><img src=&quot;images/img_8.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;><p>最終的なビジュアルイメージ</p></div></div>
+  <div class=&quot;slide&quot;><img src=&quot;images/img_9.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;><p>最終的なビジュアルイメージ</p></div></div>
+  <div class=&quot;slide&quot;><img src=&quot;images/img_10.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;><p>「LocoRoco®2」の制作時、アウトソーシングするために用意したムービー用の絵コンテ。ストーリー進行に関連するムービー
+は６本ほどでしたが、その他、リワードとして用意したムービーが数十本と、特別なムービーとしてクレイアニメ調のムービー
+１本がありました。私の業務としては、主に絵コンテの作成と、成果物に対してのフィードバックでした。</p></div></div>
+  <div class=&quot;slide&quot;><img src=&quot;images/img_11.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;><p>当初は、ロゴデザインだけの予定でしたが、世界観にあったフォントを探していても、どうもしっくり4 4 4 4
+しないため、ディレクターと「作っちゃう？」という話になり、デザインすることになりました。Illustrator でデザインした後、 TTFdit で TrueType フォントとして作成しました。</p></div></div>
+  <div class=&quot;slide&quot;><img src=&quot;images/img_12.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;><p>主に「LocoRoco®」シリーズの商品化許諾契約を締結したライセンシーに対して提供するためのスタイルガイド。ロゴ及び登場するキャラクターやデザインエレメントなどの使用時（商品化）におけるガイドラインを定めることを目的として作成したものです。</p></div></div>
+  <div class=&quot;slide&quot;><img src=&quot;images/img_13.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;><p>ロコロコのうた
+オリジナルサウンドトラックのCD一式のデザイン</p></div></div>
+  <div class=&quot;slide&quot;><img src=&quot;images/img_14.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;><p>新年の挨拶と共に、JAPAN Studio で配布されたイラスト</p></div></div>
+</div>
+<div class=&quot;carousel-nav&quot;>
+  <button id=&quot;carouselPrev&quot;>←</button>
+  <span class=&quot;counter&quot; id=&quot;carouselCounter&quot;>1 / 10</span>
+  <button id=&quot;carouselNext&quot;>→</button>
+</div>
+</div>
+</div>
+<script>
+var _cIdx = 0;
+var _cSlides = document.querySelectorAll(&quot;#carouselSlides .slide&quot;);
+var _cCounter = document.getElementById(&quot;carouselCounter&quot;);
+function _cGo(dir){
+  _cSlides[_cIdx].classList.remove(&quot;active&quot;);
+  _cIdx = (_cIdx + dir + _cSlides.length) % _cSlides.length;
+  _cSlides[_cIdx].classList.add(&quot;active&quot;);
+  _cCounter.textContent = (_cIdx + 1) + &quot; / &quot; + _cSlides.length;
+}
+document.getElementById(&quot;carouselPrev&quot;).addEventListener(&quot;click&quot;, function(){ _cGo(-1); });
+document.getElementById(&quot;carouselNext&quot;).addEventListener(&quot;click&quot;, function(){ _cGo(1); });
+</script>
+
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:16px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>プロフィール</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>*{box-sizing:border-box;}
+body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;padding:0;line-height:1.7;}
+.page{max-width:600px;margin:0 auto;padding:24px 20px;}
+.heading{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;border-bottom:1px solid #17191A;padding:20px 0 3px;margin-bottom:4px;letter-spacing:.01em;}
+.heading.no-border{border-bottom:none;padding-bottom:0;}
+.heading .sq{width:1em;height:1em;background:#8BC34A;flex-shrink:0;}
+.heading.no-sq .sq{display:none;}
+.heading .txt{font-size:inherit;}
+.heading.size-sm{font-size:13px;}.heading.size-md{font-size:16px;}.heading.size-lg{font-size:20px;}
+.lead{font-weight:700;margin:24px 0 20px;letter-spacing:.01em;}
+.lead.size-xs{font-size:15px;}.lead.size-sm{font-size:18px;}.lead.size-md{font-size:22px;}.lead.size-lg{font-size:27px;}
+.body-wrap{font-size:15px;line-height:1.62;letter-spacing:.01em;}
+.body-wrap p{margin:0 0 20px;}
+.body-wrap p:last-child{margin-bottom:0;}.body-wrap ul,.body-wrap ol{margin:0 0 20px;padding-left:1.5em;}.body-wrap ul{list-style:disc;}.body-wrap ol{list-style:decimal;}.body-wrap li{margin:0 0 12px;display:list-item;}.body-wrap li:last-child{margin-bottom:0;}.body-wrap.line-tight{line-height:1.4;}.body-wrap.line-normal{line-height:1.62;}.body-wrap.line-wide{line-height:2;}
+.body-wrap.size-sm{font-size:12px;}.body-wrap.size-md{font-size:15px;}.body-wrap.size-lg{font-size:18px;}</style>
+</head>
+<body>
+<div class=&quot;page&quot;>
+  <div class=&quot;heading size-sm&quot;><span class=&quot;sq&quot;></span><span class=&quot;txt&quot;>PlayStation® Vita 向けアプリケーション「 near 」 </span></div>
+  <div class=&quot;body-wrap size-md line-normal line-normal&quot;>
+<p><span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>企画立ち上げの初期メンバーとして、コンセプトアートを担当。</span><span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>当初は JAPAN Studioで企画を進めていましたが、途中から SCEI（現 SIEI) との共同プロジェクトとなり、再編さ</span><span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>れたチームにアートディレクターとしてアサイン。</span></p><p><span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>タッチ操作を含む、新ハードのローンチが不可欠であり、ゲーム</span><span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>制作とは異なる環境や、Vita のシステムソフトウェア部門、コーポレートデザイン部門との連携・調整など、これま</span><span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>でにない経験を積めたプロジェクトとなりました。</span></p>
+  </div>
+</div>
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:30px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>カルーセル</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>
+*{ box-sizing:border-box; }
+body{ background:#fff; color:#17191A; font-family:'Noto Sans JP',sans-serif; margin:0; padding:0; line-height:1.7; }
+.page{ max-width:600px; margin:0 auto; padding:24px 20px; }
+.carousel .slide{ display:none; }
+.carousel .slide.active{ display:block; }
+.carousel .slide img{ width:100%; height:auto; display:block; }
+.carousel .slide .credit{ text-align:right; padding:4px 8px 0; color:#5B615F; }
+.carousel .slide .text{ font-size:15px; line-height:1.7; padding:6px 8px 0; }
+.carousel .slide .text p{ margin:0 0 16px; }
+.carousel .slide .text p:last-child{ margin-bottom:0; }
+.carousel .slide .text.align-center{ text-align:center; padding-left:0; padding-right:0; }
+.carousel-nav{ display:flex; align-items:center; justify-content:center; gap:20px; padding-top:16px; }
+.carousel-nav button{ font-family:inherit; font-size:18px; width:36px; height:36px; border:1px solid #17191A; background:#fff; border-radius:50%; cursor:pointer; }
+.carousel-nav .counter{ font-size:13px; color:#5B615F; min-width:48px; text-align:center; display:inline-block; }
+</style>
+</head>
+<body>
+<div class=&quot;page&quot;>
+<div class=&quot;carousel&quot;>
+<div id=&quot;carouselSlides&quot;>
+  <div class=&quot;slide active&quot;><img src=&quot;images/img_15.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;></div></div>
+  <div class=&quot;slide&quot;><img src=&quot;images/img_16.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;><p>ビジュアルのテーマは初期の段階から、アナログチック・温かみ・手触り感といったイメージで絞っていましたが、最終イメージになるまでの間、何種類もデザインして検討しました。</p></div></div>
+  <div class=&quot;slide&quot;><img src=&quot;images/img_17.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;><p>最終的なビジュアルイメージ</p></div></div>
+  <div class=&quot;slide&quot;><img src=&quot;images/img_18.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;><p>最終的なビジュアルイメージ</p></div></div>
+  <div class=&quot;slide&quot;><img src=&quot;images/img_19.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;><p>後任や関係者にアップデート業務などを引き継げるように作成した、&quot;near&quot; Design Guideline。&quot;near&quot; の基本的なデザインの概念やルール、制作環境やセッティングの手引きなどの情報をまとめた資料。かなりの情報量だったため、まとめるのに大変苦労した記憶があります。※ 全 46 ページから一部抜粋</p></div></div>
+</div>
+<div class=&quot;carousel-nav&quot;>
+  <button id=&quot;carouselPrev&quot;>←</button>
+  <span class=&quot;counter&quot; id=&quot;carouselCounter&quot;>1 / 5</span>
+  <button id=&quot;carouselNext&quot;>→</button>
+</div>
+</div>
+</div>
+<script>
+var _cIdx = 0;
+var _cSlides = document.querySelectorAll(&quot;#carouselSlides .slide&quot;);
+var _cCounter = document.getElementById(&quot;carouselCounter&quot;);
+function _cGo(dir){
+  _cSlides[_cIdx].classList.remove(&quot;active&quot;);
+  _cIdx = (_cIdx + dir + _cSlides.length) % _cSlides.length;
+  _cSlides[_cIdx].classList.add(&quot;active&quot;);
+  _cCounter.textContent = (_cIdx + 1) + &quot; / &quot; + _cSlides.length;
+}
+document.getElementById(&quot;carouselPrev&quot;).addEventListener(&quot;click&quot;, function(){ _cGo(-1); });
+document.getElementById(&quot;carouselNext&quot;).addEventListener(&quot;click&quot;, function(){ _cGo(1); });
+</script>
+
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:16px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>プロフィール</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>*{box-sizing:border-box;}
+body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;padding:0;line-height:1.7;}
+.page{max-width:600px;margin:0 auto;padding:24px 20px;}
+.page.no-heading,.page.no-lead{padding-top:0;}
+.page.no-heading .lead{margin-top:0;}
+.page.no-lead .heading{padding-top:0;}
+.heading{display:grid;grid-template-columns:1em minmax(0,1fr);align-items:start;column-gap:8px;font-weight:700;font-size:16px;border-bottom:1px solid #17191A;padding:20px 0 3px;margin-bottom:4px;letter-spacing:.01em;}
+.heading.no-border{border-bottom:none;padding-bottom:0;}
+.heading .sq{width:1em;height:1em;background:#8BC34A;display:block;margin-top:.35em;}
+.heading .txt{min-width:0;overflow-wrap:anywhere;}
+.heading.no-sq .sq{display:none;}
+.heading.icon-emoji .sq{background:none;display:flex;align-items:center;justify-content:center;font-size:1em;line-height:1;}
+.heading .txt{font-size:inherit;}
+.heading.size-sm{font-size:13px;}.heading.size-md{font-size:16px;}.heading.size-lg{font-size:20px;}
+.lead{font-weight:700;margin:24px 0 20px;letter-spacing:.01em;}
+.lead.size-xs{font-size:15px;}.lead.size-sm{font-size:18px;}.lead.size-md{font-size:22px;}.lead.size-lg{font-size:27px;}
+.body-wrap{font-size:15px;line-height:1.62;letter-spacing:.01em;}
+.body-wrap p{margin:0 0 20px;}
+.body-wrap p:last-child{margin-bottom:0;}.body-wrap ul,.body-wrap ol{margin:0 0 20px;padding-left:1.5em;}.body-wrap ul{list-style:disc;}.body-wrap ol{list-style:decimal;}.body-wrap li{margin:0 0 12px;display:list-item;}.body-wrap li:last-child{margin-bottom:0;}.body-wrap.line-tight{line-height:1.4;}.body-wrap.line-normal{line-height:1.62;}.body-wrap.line-wide{line-height:2;}
+.body-wrap.size-sm{font-size:12px;}.body-wrap.size-md{font-size:15px;}.body-wrap.size-lg{font-size:18px;}</style>
+</head>
+<body>
+<div class=&quot;page no-lead&quot;>
+  <div class=&quot;heading size-sm&quot;><span class=&quot;sq&quot; aria-hidden=&quot;true&quot;></span><span class=&quot;txt&quot;>PlayStation® 2 EyeToy USB カメラ専用「サルアイトーイ 大騒ぎ！ウッキウキゲームてんこもりっ！！」</span></div>
+  <div class=&quot;body-wrap size-md line-normal line-normal&quot;>
+<p>プロモーション用のイラストは、タイトルに収録されているミニゲームを再構成して、ディズニーランドのマップ<span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>のようなイメージで賑やかに見せたいとオーダーを受けて制作。ゲーム内で使用されたモデルデータとデザインも</span><span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>なくモデルデータが存在しないものは LightWave でモデリング、レンダリングなどをして、Photoshop で</span><span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>構成しながら描きました。</span></p>
+  </div>
+</div>
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:40px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>カルーセル</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>
+*{ box-sizing:border-box; }
+body{ background:#fff; color:#17191A; font-family:'Noto Sans JP',sans-serif; margin:0; padding:0; line-height:1.7; }
+.page{ max-width:600px; margin:0 auto; padding:24px 20px; }
+.carousel .slide{ display:none; }
+.carousel .slide.active{ display:block; }
+.carousel .slide img{ width:100%; height:auto; display:block; }
+.carousel .slide .credit{ text-align:right; padding:4px 8px 0; color:#5B615F; }
+.carousel .slide .text{ font-size:15px; line-height:1.7; padding:6px 8px 0; }
+.carousel .slide .text p{ margin:0 0 16px; }
+.carousel .slide .text p:last-child{ margin-bottom:0; }
+.carousel .slide .text.size-sm{ font-size:12px; }
+.carousel .slide .text.size-md{ font-size:15px; }
+.carousel .slide .text.size-lg{ font-size:18px; }
+.carousel .slide .text.align-center{ text-align:center; padding-left:0; padding-right:0; }
+.carousel-nav{ display:flex; align-items:center; justify-content:center; gap:20px; padding-top:16px; }
+.carousel-nav button{ font-family:inherit; font-size:18px; width:36px; height:36px; border:1px solid #17191A; background:#fff; border-radius:50%; cursor:pointer; }
+.carousel-nav .counter{ font-size:13px; color:#5B615F; min-width:48px; text-align:center; display:inline-block; }
+</style>
+</head>
+<body>
+<div class=&quot;page&quot;>
+<div class=&quot;carousel&quot;>
+<div id=&quot;carouselSlides&quot;>
+  <div class=&quot;slide active&quot;><img src=&quot;images/img_20.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;&quot;><p>プロモーション用のイラスト・PC用壁紙のデザイン</p></div></div>
+</div>
+<div class=&quot;carousel-nav&quot; style=&quot;display:none&quot;>
+  <button id=&quot;carouselPrev&quot;>←</button>
+  <span class=&quot;counter&quot; id=&quot;carouselCounter&quot;>1 / 1</span>
+  <button id=&quot;carouselNext&quot;>→</button>
+</div>
+</div>
+</div>
+<script>
+var _cIdx = 0;
+var _cSlides = document.querySelectorAll(&quot;#carouselSlides .slide&quot;);
+var _cCounter = document.getElementById(&quot;carouselCounter&quot;);
+function _cGo(dir){
+  _cSlides[_cIdx].classList.remove(&quot;active&quot;);
+  _cIdx = (_cIdx + dir + _cSlides.length) % _cSlides.length;
+  _cSlides[_cIdx].classList.add(&quot;active&quot;);
+  _cCounter.textContent = (_cIdx + 1) + &quot; / &quot; + _cSlides.length;
+}
+document.getElementById(&quot;carouselPrev&quot;).addEventListener(&quot;click&quot;, function(){ _cGo(-1); });
+document.getElementById(&quot;carouselNext&quot;).addEventListener(&quot;click&quot;, function(){ _cGo(1); });
+</script>
+
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:16px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>プロフィール</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>*{box-sizing:border-box;}
+body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;padding:0;line-height:1.7;}
+.page{max-width:600px;margin:0 auto;padding:24px 20px;}
+.page.no-heading,.page.no-lead{padding-top:0;}
+.page.no-heading .lead{margin-top:0;}
+.page.no-lead .heading{padding-top:0;}
+.heading{display:grid;grid-template-columns:1em minmax(0,1fr);align-items:start;column-gap:8px;font-weight:700;font-size:16px;border-bottom:1px solid #17191A;padding:20px 0 3px;margin-bottom:4px;letter-spacing:.01em;}
+.heading.no-border{border-bottom:none;padding-bottom:0;}
+.heading .sq{width:1em;height:1em;background:#8BC34A;display:block;margin-top:.35em;}
+.heading .txt{min-width:0;overflow-wrap:anywhere;}
+.heading.no-sq .sq{display:none;}
+.heading.icon-emoji .sq{background:none;display:flex;align-items:center;justify-content:center;font-size:1em;line-height:1;}
+.heading .txt{font-size:inherit;}
+.heading.size-sm{font-size:13px;}.heading.size-md{font-size:16px;}.heading.size-lg{font-size:20px;}
+.lead{font-weight:700;margin:24px 0 20px;letter-spacing:.01em;}
+.lead.size-xs{font-size:15px;}.lead.size-sm{font-size:18px;}.lead.size-md{font-size:22px;}.lead.size-lg{font-size:27px;}
+.body-wrap{font-size:15px;line-height:1.62;letter-spacing:.01em;}
+.body-wrap p{margin:0 0 20px;}
+.body-wrap p:last-child{margin-bottom:0;}.body-wrap ul,.body-wrap ol{margin:0 0 20px;padding-left:1.5em;}.body-wrap ul{list-style:disc;}.body-wrap ol{list-style:decimal;}.body-wrap li{margin:0 0 12px;display:list-item;}.body-wrap li:last-child{margin-bottom:0;}.body-wrap.line-tight{line-height:1.4;}.body-wrap.line-normal{line-height:1.62;}.body-wrap.line-wide{line-height:2;}
+.body-wrap.size-sm{font-size:12px;}.body-wrap.size-md{font-size:15px;}.body-wrap.size-lg{font-size:18px;}</style>
+</head>
+<body>
+<div class=&quot;page no-lead&quot;>
+  <div class=&quot;heading size-sm&quot;><span class=&quot;sq&quot; aria-hidden=&quot;true&quot;></span><span class=&quot;txt&quot;>PlayStation® Store キャンペーン企画「 MONSTER GAMERS Vol.02 」</span></div>
+  <div class=&quot;body-wrap size-md line-normal&quot;>
+<p>キャラクターを描く JAPAN Studio のアーティストたちに、モンスターをテーマにイラストの描き下ろし依頼があった企画。この依頼を受けるとき、「LocoRoco®」の世界観を期待されているのだろうと考えましたが、「LocoRoco®」のイメージを払拭したい気持ちと、そのころ制作していたタイトルの世界観によせて描きたい気持ちがあったため、このようなイラストになりました。</p>
+  </div>
+</div>
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:40px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>カルーセル</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>
+*{ box-sizing:border-box; }
+body{ background:#fff; color:#17191A; font-family:'Noto Sans JP',sans-serif; margin:0; padding:0; line-height:1.7; }
+.page{ max-width:600px; margin:0 auto; padding:24px 20px; }
+.carousel .slide{ display:none; }
+.carousel .slide.active{ display:block; }
+.carousel .slide img{ width:100%; height:auto; display:block; }
+.carousel .slide .credit{ text-align:right; padding:4px 8px 0; color:#5B615F; }
+.carousel .slide .text{ font-size:15px; line-height:1.7; padding:6px 8px 0; }
+.carousel .slide .text p{ margin:0 0 16px; }
+.carousel .slide .text p:last-child{ margin-bottom:0; }
+.carousel .slide .text.size-sm{ font-size:12px; }
+.carousel .slide .text.size-md{ font-size:15px; }
+.carousel .slide .text.size-lg{ font-size:18px; }
+.carousel .slide .text.align-center{ text-align:center; padding-left:0; padding-right:0; }
+.carousel-nav{ display:flex; align-items:center; justify-content:center; gap:20px; padding-top:16px; }
+</style>
+</head>
+<body>
+<div class=&quot;page&quot;>
+<div class=&quot;carousel&quot;>
+<div id=&quot;carouselSlides&quot;>
+  <div class=&quot;slide active&quot;><img src=&quot;images/img_21.png&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>⁠© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:12px;text-align:center;&quot;></div></div>
+</div>
+<div class=&quot;carousel-nav&quot; style=&quot;display:none&quot;>
+  <button id=&quot;carouselPrev&quot;>←</button>
+  <span class=&quot;counter&quot; id=&quot;carouselCounter&quot;>1 / 1</span>
+  <button id=&quot;carouselNext&quot;>→</button>
+</div>
+</div>
+</div>
+<script>
+var _cIdx = 0;
+var _cSlides = document.querySelectorAll(&quot;#carouselSlides .slide&quot;);
+var _cCounter = document.getElementById(&quot;carouselCounter&quot;);
+function _cGo(dir){
+  _cSlides[_cIdx].classList.remove(&quot;active&quot;);
+  _cIdx = (_cIdx + dir + _cSlides.length) % _cSlides.length;
+  _cSlides[_cIdx].classList.add(&quot;active&quot;);
+  _cCounter.textContent = (_cIdx + 1) + &quot; / &quot; + _cSlides.length;
+}
+document.getElementById(&quot;carouselPrev&quot;).addEventListener(&quot;click&quot;, function(){ _cGo(-1); });
+document.getElementById(&quot;carouselNext&quot;).addEventListener(&quot;click&quot;, function(){ _cGo(1); });
+</script>
+
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:16px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>プロフィール</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>*{box-sizing:border-box;}
+body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;padding:0;line-height:1.7;}
+.page{max-width:600px;margin:0 auto;padding:24px 20px;}
+.page.no-heading,.page.no-lead{padding-top:0;}
+.page.no-heading .lead{margin-top:0;}
+.page.no-lead .heading{padding-top:0;}
+.heading{display:grid;grid-template-columns:1em minmax(0,1fr);align-items:start;column-gap:8px;font-weight:700;font-size:16px;border-bottom:1px solid #17191A;padding:20px 0 3px;margin-bottom:4px;letter-spacing:.01em;}
+.heading.no-border{border-bottom:none;padding-bottom:0;}
+.heading .sq{width:1em;height:1em;background:#8bc34a;display:block;margin-top:.35em;}
+.heading .txt{min-width:0;overflow-wrap:anywhere;}
+.heading.no-sq .sq{display:none;}
+.heading.icon-emoji .sq{background:none;display:flex;align-items:center;justify-content:center;font-size:1em;line-height:1;}
+.heading .txt{font-size:inherit;}
+.heading.size-sm{font-size:13px;}.heading.size-md{font-size:16px;}.heading.size-lg{font-size:20px;}
+.lead{font-weight:700;margin:24px 0 20px;letter-spacing:.01em;}
+.lead.size-xs{font-size:15px;}.lead.size-sm{font-size:18px;}.lead.size-md{font-size:22px;}.lead.size-lg{font-size:27px;}
+.body-wrap{font-size:15px;line-height:1.62;letter-spacing:.01em;}
+.body-wrap p{margin:0 0 20px;}
+.body-wrap p:last-child{margin-bottom:0;}.body-wrap ul,.body-wrap ol{margin:0 0 20px;padding-left:1.5em;}.body-wrap ul{list-style:disc;}.body-wrap ol{list-style:decimal;}.body-wrap li{margin:0 0 12px;display:list-item;}.body-wrap li:last-child{margin-bottom:0;}.body-wrap.line-tight{line-height:1.4;}.body-wrap.line-normal{line-height:1.62;}.body-wrap.line-wide{line-height:2;}
+.body-wrap.size-sm{font-size:12px;}.body-wrap.size-md{font-size:15px;}.body-wrap.size-lg{font-size:18px;}</style>
+</head>
+<body>
+<div class=&quot;page no-lead&quot;>
+  <div class=&quot;heading size-sm&quot;><span class=&quot;sq&quot; aria-hidden=&quot;true&quot;></span><span class=&quot;txt&quot;>SIE JAPAN Studio 公式 YouTube チャンネル「Jスタ News」</span></div>
+  <div class=&quot;body-wrap size-md line-normal line-normal&quot;>
+<p>公式 YouTube チャンネル「Jスタ News」を立ち上げる際に、ロゴデザインをマーケティングチームから依頼されて、制作。</p>
+  </div>
+</div>
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+    <div class="card card-html" style="margin-bottom:40px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;UTF-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+<title>カルーセル</title>
+<link href=&quot;https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;>
+<style>
+*{ box-sizing:border-box; }
+body{ background:#fff; color:#17191A; font-family:'Noto Sans JP',sans-serif; margin:0; padding:0; line-height:1.7; }
+.page{ max-width:600px; margin:0 auto; padding:24px 20px; }
+.carousel .slide{ display:none; }
+.carousel .slide.active{ display:block; }
+.carousel .slide img{ width:100%; height:auto; display:block; }
+.carousel .slide .credit{ text-align:right; padding:4px 8px 0; color:#5B615F; }
+.carousel .slide .text{ font-size:15px; line-height:1.7; padding:6px 8px 0; }
+.carousel .slide .text p{ margin:0 0 16px; }
+.carousel .slide .text p:last-child{ margin-bottom:0; }
+.carousel .slide .text.size-sm{ font-size:12px; }
+.carousel .slide .text.size-md{ font-size:15px; }
+.carousel .slide .text.size-lg{ font-size:18px; }
+.carousel .slide .text.align-center{ text-align:center; padding-left:0; padding-right:0; }
+.carousel-nav{ display:flex; align-items:center; justify-content:center; gap:20px; padding-top:16px; }
+.carousel-nav button{ font-family:inherit; font-size:18px; width:36px; height:36px; border:1px solid #17191A; background:#fff; border-radius:50%; cursor:pointer; }
+.carousel-nav .counter{ font-size:13px; color:#5B615F; min-width:48px; text-align:center; display:inline-block; }
+</style>
+</head>
+<body>
+<div class=&quot;page&quot;>
+<div class=&quot;carousel&quot;>
+<div id=&quot;carouselSlides&quot;>
+  <div class=&quot;slide active&quot;><img src=&quot;images/img_22.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:15px;&quot;></div></div>
+  <div class=&quot;slide&quot;><img src=&quot;images/img_23.jpg&quot;><div class=&quot;credit&quot; style=&quot;font-size:8px&quot;>© Sony Interactive Entertainment Inc.⁠</div><div class=&quot;text&quot; style=&quot;font-size:15px;&quot;></div></div>
+</div>
+<div class=&quot;carousel-nav&quot;>
+  <button id=&quot;carouselPrev&quot;>←</button>
+  <span class=&quot;counter&quot; id=&quot;carouselCounter&quot;>1 / 2</span>
+  <button id=&quot;carouselNext&quot;>→</button>
+</div>
+</div>
+</div>
+<script>
+var _cIdx = 0;
+var _cSlides = document.querySelectorAll(&quot;#carouselSlides .slide&quot;);
+var _cCounter = document.getElementById(&quot;carouselCounter&quot;);
+function _cGo(dir){
+  _cSlides[_cIdx].classList.remove(&quot;active&quot;);
+  _cIdx = (_cIdx + dir + _cSlides.length) % _cSlides.length;
+  _cSlides[_cIdx].classList.add(&quot;active&quot;);
+  _cCounter.textContent = (_cIdx + 1) + &quot; / &quot; + _cSlides.length;
+}
+document.getElementById(&quot;carouselPrev&quot;).addEventListener(&quot;click&quot;, function(){ _cGo(-1); });
+document.getElementById(&quot;carouselNext&quot;).addEventListener(&quot;click&quot;, function(){ _cGo(1); });
+</script>
+
+</body>
+</html>" onload="__cardIframeOnload(this)"></iframe></div>
+</div></main>
+<footer class="site-footer">
+  <nav><a href="top.html">TOP</a> | <a href="page1789636872620.html">CAREER</a> | <a href="career.html">WORKS</a> | <a href="contact.html">CONTACT</a></nav>
+  <div class="sns-row"><a href="https://note.com/keigo_tsuchiya" target="_blank" rel="noopener noreferrer"><img src="images/img_25.jpg" style="height:10px;width:auto;"></a><a href="https://i-roiro.com/index" target="_blank" rel="noopener noreferrer"><img src="images/img_26.jpg" style="height:12px;width:auto;"></a><a href="#" target="_blank" rel="noopener noreferrer"><img src="images/img_27.jpg" style="height:18px;width:auto;"></a></div>
+  <div>©    KEIGO TSUCHIYA</div>
+</footer>
+</div>
+</body>
+</html>
