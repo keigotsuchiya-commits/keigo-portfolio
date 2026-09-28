@@ -9,12 +9,13 @@
 *{ box-sizing:border-box; }
 body{ background:#FFFFFF; color:#17191A; font-family:'Noto Sans JP',sans-serif; margin:0; padding:0; line-height:1.7; }
 .site-frame{ width:100%; max-width:none; margin:0; }
-.site-header{ display:flex; flex-direction:column; align-items:stretch; padding:16px 20px 8px; font-size:clamp(9px, 2.2vw, 12px); }
-.site-header > div{ line-height:1; }
-.site-header nav{ display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:6px; font-size:clamp(10px, 2.6vw, 14px); margin-top:16px; line-height:1; }
+.site-header{ display:flex; flex-direction:row; align-items:center; justify-content:space-between; gap:16px; padding:16px 20px 8px; font-size:clamp(9px, 2.2vw, 12px); }
+.site-header > div{ line-height:1; white-space:nowrap; }
+.site-header nav{ display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:6px; font-size:clamp(10px, 2.6vw, 14px); margin-top:0; line-height:1; }
 .site-header nav a{ white-space:nowrap; }
-@media (max-width:480px){ .site-header{ padding:12px 10px 6px; } .site-header nav{ gap:4px; } }
+@media (max-width:480px){ .site-header{ gap:8px; padding:12px 10px 6px; } .site-header nav{ gap:4px; } }
 header a, footer a{ color:#17191A; text-decoration:none; }
+header a.current, footer a.current{ font-weight:700; }
 .site-body{ padding:0; }
 .card-list{ display:flex; flex-direction:column; gap:0; }
 .card{ border:1px solid #ddd; overflow:hidden; }
@@ -117,10 +118,10 @@ window.addEventListener("orientationchange", __cardOnViewportChange, {passive:tr
 <div class="site-frame">
 <header class="site-header">
   <div>KEIGO TSUCHIYA | Portfolio</div>
-  <nav><a href="top.html">TOP</a> | <a href="page1789636872620.html">CAREER</a> | <a href="career.html">WORKS</a> | <a href="contact.html">CONTACT</a></nav>
+  <nav><a href="top.html">TOP</a> | <a href="page1789636872620.html">CAREER</a> | <a href="career.html">WORKS</a> | <a href="contact.html" class="current" aria-current="page">CONTACT</a></nav>
 </header>
 <main class="site-body"><div class="card-list">
-    <div class="card card-image" style="margin-bottom:16px;"><img src="images/img_24.png" style="width:100%;height:auto;display:block;"></div>
+    <div class="card card-image" style="margin-bottom:16px;"><img src="images/img_28.png" style="width:100%;height:auto;display:block;"></div>
     <div class="card card-html" style="margin-bottom:40px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
 <html lang=&quot;ja&quot;>
 <head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
@@ -272,8 +273,8 @@ document.getElementById(&quot;contactForm&quot;).addEventListener(&quot;submit&q
 </html>" onload="__cardIframeOnload(this)"></iframe></div>
 </div></main>
 <footer class="site-footer">
-  <nav><a href="top.html">TOP</a> | <a href="page1789636872620.html">CAREER</a> | <a href="career.html">WORKS</a> | <a href="contact.html">CONTACT</a></nav>
-  <div class="sns-row"><a href="https://note.com/keigo_tsuchiya" target="_blank" rel="noopener noreferrer"><img src="images/img_25.jpg" style="height:10px;width:auto;"></a><a href="https://asobiva.i-roiro.com" target="_blank" rel="noopener noreferrer"><img src="images/img_26.jpg" style="height:12px;width:auto;"></a></div>
+  <nav><a href="top.html">TOP</a> | <a href="page1789636872620.html">CAREER</a> | <a href="career.html">WORKS</a> | <a href="contact.html" class="current" aria-current="page">CONTACT</a></nav>
+  <div class="sns-row"><a href="https://note.com/keigo_tsuchiya" target="_blank" rel="noopener noreferrer"><img src="images/img_29.jpg" style="height:10px;width:auto;"></a><a href="https://asobiva.i-roiro.com" target="_blank" rel="noopener noreferrer"><img src="images/img_30.jpg" style="height:12px;width:auto;"></a></div>
   <div>©    KEIGO TSUCHIYA</div>
 </footer>
 </div>
