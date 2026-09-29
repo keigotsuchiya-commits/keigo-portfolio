@@ -121,7 +121,241 @@ window.addEventListener("orientationchange", __cardOnViewportChange, {passive:tr
   <nav><a href="top.html">TOP</a> | <a href="page1789636872620.html">CAREER</a> | <a href="career.html">WORKS</a> | <a href="contact.html" class="current" aria-current="page">CONTACT</a></nav>
 </header>
 <main class="site-body"><div class="card-list">
-    <div class="card card-image" style="margin-bottom:16px;"><img src="images/img_22.png" style="width:100%;height:auto;display:block;"></div>
+    <div class="card card-html" style="margin-bottom:16px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
+<html lang=&quot;ja&quot;>
+<head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
+<meta charset=&quot;utf-8&quot;>
+<meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;>
+<title>Slideshow</title>
+<style>
+html,body{margin:0;padding:0}
+.ss{position:relative;width:100%;aspect-ratio:3/1;overflow:hidden;background:#000}
+.ss-base,.ss-full{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;user-select:none;-webkit-user-drag:none}
+.ss-fx{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.ss-pc{position:absolute;background-repeat:no-repeat;will-change:transform,opacity}
+.ss-scan{position:absolute;inset:0;opacity:0;background:repeating-linear-gradient(0deg,rgba(0,0,0,.28) 0 1px,transparent 1px 3px)}
+.ss-dots{position:absolute;z-index:10;display:flex;gap:8px;bottom:5%}
+.ss-dots[data-pos=&quot;bottom-center&quot;]{left:50%;transform:translateX(-50%)}
+.ss-dots[data-pos=&quot;bottom-left&quot;]{left:3%}
+.ss-dots[data-pos=&quot;bottom-right&quot;]{right:3%}
+.ss-dot{width:6px;height:6px;padding:0;border:0;outline:none;border-radius:50%;cursor:pointer;box-shadow:none;transition:opacity .3s}
+</style>
+</head>
+<body>
+<div class=&quot;ss&quot; id=&quot;ss&quot;></div>
+<div id=&quot;ss-images&quot; hidden style=&quot;display:none&quot;>
+<img src=&quot;images/slideshow_(5)_img1.jpg&quot; alt=&quot;&quot; data-name=&quot;7EF2D907-4F75-406E-9961-B373A479B24C.png&quot;>
+<img src=&quot;images/slideshow_(5)_img2.jpg&quot; alt=&quot;&quot; data-name=&quot;68C86E82-B405-439D-A898-EE0E87402D20.jpeg&quot;>
+<img src=&quot;images/slideshow_(5)_img3.jpg&quot; alt=&quot;&quot; data-name=&quot;21536A3F-894D-4666-A196-62BA09F7466F.png&quot;>
+<img src=&quot;images/slideshow_(5)_img4.jpg&quot; alt=&quot;&quot; data-name=&quot;09B6C7E8-6F01-497B-97DE-40D3B2879FB0.png&quot;>
+</div>
+<script type=&quot;application/json&quot; id=&quot;slideshow-data&quot;>{&quot;format&quot;:&quot;fade-slideshow&quot;,&quot;version&quot;:3,&quot;title&quot;:&quot;Slideshow&quot;,&quot;display&quot;:30,&quot;fade&quot;:1.2,&quot;effect&quot;:&quot;crossfade&quot;,&quot;stripe&quot;:{&quot;count&quot;:12,&quot;dir&quot;:&quot;h&quot;,&quot;enter&quot;:&quot;start&quot;,&quot;order&quot;:&quot;start&quot;},&quot;glitch&quot;:{&quot;strength&quot;:&quot;mid&quot;,&quot;rgb&quot;:true,&quot;scan&quot;:true},&quot;loop&quot;:true,&quot;aspect&quot;:&quot;3:1&quot;,&quot;indicator&quot;:{&quot;show&quot;:true,&quot;pos&quot;:&quot;bottom-center&quot;,&quot;active&quot;:&quot;#ffffff&quot;,&quot;inactive&quot;:&quot;#ffffff&quot;},&quot;images&quot;:[{&quot;name&quot;:&quot;7EF2D907-4F75-406E-9961-B373A479B24C.png&quot;},{&quot;name&quot;:&quot;68C86E82-B405-439D-A898-EE0E87402D20.jpeg&quot;},{&quot;name&quot;:&quot;21536A3F-894D-4666-A196-62BA09F7466F.png&quot;},{&quot;name&quot;:&quot;09B6C7E8-6F01-497B-97DE-40D3B2879FB0.png&quot;}]}</script>
+<script>function createSlideshow(root, cfg) {
+  var EFFECTS = ['crossfade', 'stripe', 'glitch'];
+  var base = document.createElement('img');
+  base.className = 'ss-base'; base.alt = ''; base.draggable = false;
+  var fx = document.createElement('div'); fx.className = 'ss-fx';
+  root.appendChild(base); root.appendChild(fx);
+
+  var imgs = [], cur = 0, busy = false, timer = null, dots = [], dotWrap = null, auto = true;
+
+  function toURL(src) {
+    if (src.indexOf('data:') !== 0) return src;
+    var m = src.match(/^data:([^;,]+)?(;base64)?,(.*)$/);
+    if (!m || !m[2]) return src;
+    var bin = atob(m[3]), arr = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) arr[i] = bin.charCodeAt(i);
+    return URL.createObjectURL(new Blob([arr], { type: m[1] || 'image/jpeg' }));
+  }
+  function addImages(list) {
+    list.forEach(function (src) {
+      var im = new Image(); im.src = toURL(src); imgs.push(im);
+    });
+    if (!base.getAttribute('src') &amp;&amp; imgs.length) base.src = imgs[0].src;
+    buildDots(); schedule();
+  }
+  function buildDots() {
+    if (dotWrap) dotWrap.remove();
+    dots = []; dotWrap = null;
+    var ind = cfg.indicator || {};
+    if (imgs.length < 2 || !ind.show) return;
+    dotWrap = document.createElement('div'); dotWrap.className = 'ss-dots';
+    dotWrap.setAttribute('data-pos', ind.pos || 'bottom-center');
+    imgs.forEach(function (_, i) {
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'ss-dot';
+      b.setAttribute('aria-label', (i + 1) + '枚目を表示');
+      b.addEventListener('click', function () { go(i); });
+      dotWrap.appendChild(b); dots.push(b);
+    });
+    root.appendChild(dotWrap); paint();
+  }
+  function paint() {
+    var ind = cfg.indicator || {};
+    dots.forEach(function (b, i) {
+      var on = i === cur;
+      b.style.background = on ? (ind.active || '#ffffff') : (ind.inactive || '#ffffff');
+      b.style.opacity = on ? '1' : '0.45';
+      b.setAttribute('aria-current', on ? 'true' : 'false');
+    });
+  }
+
+  function cover(img, W, H) {
+    var iw = img.naturalWidth || W, ih = img.naturalHeight || H;
+    var s = Math.max(W / iw, H / ih), dw = iw * s, dh = ih * s;
+    return { dw: dw, dh: dh, ox: (W - dw) / 2, oy: (H - dh) / 2 };
+  }
+  // 次の画像の一部分だけを表示するパーツ（つなぎ目がずれないよう整数pxで区切る）
+  function piece(img, cv, l, t, r, b) {
+    var d = document.createElement('div'); d.className = 'ss-pc';
+    d.style.left = l + 'px'; d.style.top = t + 'px';
+    d.style.width = (r - l) + 'px'; d.style.height = (b - t) + 'px';
+    d.style.backgroundImage = 'url(&quot;' + img.src + '&quot;)';
+    d.style.backgroundSize = cv.dw + 'px ' + cv.dh + 'px';
+    d.style.backgroundPosition = (cv.ox - l) + 'px ' + (cv.oy - t) + 'px';
+    fx.appendChild(d); return d;
+  }
+  function done(anims) { return Promise.all(anims.map(function (a) { return a.finished; })); }
+
+  var FX = {
+    crossfade: function (prev, next, D) {
+      var el = document.createElement('img'); el.className = 'ss-full'; el.src = next.src; fx.appendChild(el);
+      return done([el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: D, easing: 'ease-in-out', fill: 'forwards' })]);
+    },
+    stripe: function (prev, next, D, W, H) {
+      var n = Math.max(4, Math.min(24, cfg.stripe.count | 0)), vert = cfg.stripe.dir !== 'h';
+      var cv = cover(next, W, H), anims = [], len = vert ? W : H, step = len / n;
+      for (var i = 0; i < n; i++) {
+        var a = Math.floor(i * step), b = i === n - 1 ? len : Math.floor((i + 1) * step);
+        var d = vert ? piece(next, cv, a, 0, b, H) : piece(next, cv, 0, a, W, b);
+        var o, ord = cfg.stripe.order;
+        if (ord === 'end') o = (n - 1 - i) / (n - 1);
+        else if (ord === 'center') o = Math.abs(i - (n - 1) / 2) / ((n - 1) / 2);
+        else if (ord === 'random') o = Math.random();
+        else o = i / (n - 1);
+        // 入る方向：alt=交互 / from-start=左（縦向きは上）から / from-end=右（縦向きは下）から
+        var inDir = cfg.stripe.enter, neg = inDir === 'start' ? true : inDir === 'end' ? false : i % 2 === 0;
+        var from = (neg ? '-' : '') + '100%';
+        var tf = vert ? 'translateY(' + from + ')' : 'translateX(' + from + ')';
+        anims.push(d.animate([{ transform: tf }, { transform: 'none' }],
+          { duration: D * 0.55, delay: o * D * 0.45, easing: 'cubic-bezier(.65,0,.35,1)', fill: 'both' }));
+      }
+      return done(anims);
+    },
+    glitch: function (prev, next, D, W, H) {
+      var cw = Math.round(W), ch = Math.round(H);
+      function canvas() { var c = document.createElement('canvas'); c.width = cw; c.height = ch; return c; }
+      function prep(img) { var c = canvas(), k = cover(img, cw, ch); c.getContext('2d').drawImage(img, k.ox, k.oy, k.dw, k.dh); return c; }
+      var A = prep(prev), B = prep(next), frame = canvas(), fctx = frame.getContext('2d');
+      var out = canvas(); out.className = 'ss-full'; fx.appendChild(out);
+      var ctx = out.getContext('2d');
+      var S = { weak: { amp: .02, bands: 4, rgb: .004 }, mid: { amp: .05, bands: 8, rgb: .008 }, strong: { amp: .10, bands: 14, rgb: .015 } }[cfg.glitch.strength] || { amp: .05, bands: 8, rgb: .008 };
+      var chans = cfg.glitch.rgb ? ['#f00', '#0f0', '#00f'].map(function (col) { var c = canvas(); return { c: c, x: c.getContext('2d'), col: col }; }) : null;
+      var scan = null;
+      if (cfg.glitch.scan) { scan = document.createElement('div'); scan.className = 'ss-scan'; fx.appendChild(scan); }
+      // 横12段それぞれが「前→次」に切り替わる時刻（1段につき1回だけ）
+      var ROWS = 12, sw = [];
+      for (var i = 0; i < ROWS; i++) sw.push(0.3 + Math.random() * 0.4);
+      var rh = ch / ROWS, bands = [], lastQ = -1, t0 = performance.now();
+      function srcAt(y, t) { return t >= sw[Math.min(ROWS - 1, Math.floor(y / rh))] ? B : A; }
+      return new Promise(function (resolve) {
+        function tick(now) {
+          var t = Math.min(1, (now - t0) / D), env = Math.sin(Math.PI * t), q = Math.floor((now - t0) / 55);
+          if (q !== lastQ) {
+            lastQ = q; bands = [];
+            var nb = Math.round(S.bands * (0.5 + env));
+            for (var k = 0; k < nb; k++) {
+              var h = ch * (0.01 + Math.random() * 0.08), y = Math.random() * (ch - h);
+              bands.push({ y: y, h: h, dx: (Math.random() * 2 - 1) * S.amp * cw * env });
+            }
+          }
+          for (var r = 0; r < ROWS; r++) {
+            var y0 = Math.floor(r * rh), y1 = r === ROWS - 1 ? ch : Math.floor((r + 1) * rh);
+            fctx.drawImage(t >= sw[r] ? B : A, 0, y0, cw, y1 - y0, 0, y0, cw, y1 - y0);
+          }
+          bands.forEach(function (bd) {
+            var src = srcAt(bd.y + bd.h / 2, t);
+            fctx.drawImage(src, 0, bd.y, cw, bd.h, bd.dx, bd.y, cw, bd.h);
+            fctx.drawImage(src, 0, bd.y, cw, bd.h, bd.dx - (bd.dx > 0 ? cw : -cw), bd.y, cw, bd.h);
+          });
+          var off = chans ? S.rgb * cw * env : 0;
+          if (chans &amp;&amp; off >= 0.5) {
+            chans.forEach(function (c) {
+              c.x.globalCompositeOperation = 'source-over'; c.x.drawImage(frame, 0, 0);
+              c.x.globalCompositeOperation = 'multiply'; c.x.fillStyle = c.col; c.x.fillRect(0, 0, cw, ch);
+            });
+            ctx.globalCompositeOperation = 'source-over'; ctx.fillStyle = '#000'; ctx.fillRect(0, 0, cw, ch);
+            ctx.globalCompositeOperation = 'lighter';
+            ctx.drawImage(chans[0].c, off, 0); ctx.drawImage(chans[1].c, 0, 0); ctx.drawImage(chans[2].c, -off, 0);
+            // ずらした分だけ空く両端を、端の1列を引き伸ばして埋める（端に色の帯が出ないように）
+            ctx.drawImage(chans[0].c, 0, 0, 1, ch, 0, 0, off, ch);
+            ctx.drawImage(chans[2].c, cw - 1, 0, 1, ch, cw - off, 0, off, ch);
+            ctx.globalCompositeOperation = 'source-over';
+          } else {
+            ctx.drawImage(frame, 0, 0);
+          }
+          if (scan) scan.style.opacity = (env * 0.7).toFixed(3);
+          if (t < 1) requestAnimationFrame(tick); else { ctx.drawImage(B, 0, 0); resolve(); }
+        }
+        requestAnimationFrame(tick);
+      });
+    }
+  };
+
+  function schedule() {
+    clearTimeout(timer);
+    if (!auto || busy || imgs.length < 2) return;
+    timer = setTimeout(function () { go((cur + 1) % imgs.length); }, Math.max(0.5, cfg.display) * 1000);
+  }
+  function go(i) {
+    if (busy || i === cur || !imgs[i]) return;
+    busy = true; clearTimeout(timer);
+    var eff = cfg.effect === 'random' ? EFFECTS[Math.floor(Math.random() * EFFECTS.length)] : cfg.effect;
+    if (!FX[eff]) eff = 'crossfade';
+    var prev = imgs[cur], next = imgs[i], D = Math.max(0, Number(cfg.duration) || 0) * 1000;
+    if (D < 50) eff = 'none';
+    var W = root.clientWidth, H = root.clientHeight;
+    if (cfg.onEffect) cfg.onEffect(eff);
+    cur = i; paint();
+    Promise.all([prev.decode ? prev.decode().catch(function () {}) : 0, next.decode ? next.decode().catch(function () {}) : 0])
+      .then(function () { return eff === 'none' ? 0 : FX[eff](prev, next, D, W, H); })
+      .catch(function () {})
+      .then(function () { base.src = next.src; return base.decode ? base.decode().catch(function () {}) : 0; })
+      .then(function () { fx.innerHTML = ''; busy = false; schedule(); });
+  }
+
+  return {
+    add: addImages,
+    next: function () { go((cur + 1) % imgs.length); },
+    setAuto: function (v) { auto = v; if (v) schedule(); else clearTimeout(timer); },
+    isBusy: function () { return busy; }
+  };
+}
+(function ssPlayer(){
+  var root = document.getElementById('ss');
+  var src = document.getElementById('slideshow-data');
+  if (!root || !src) return;
+  var d;
+  try { d = JSON.parse(src.textContent); } catch (e) { return; }
+  // 画像は <div id=&quot;ss-images&quot;> 内の <img> から読む（旧形式はJSON内のsrc）
+  var tags = document.querySelectorAll('#ss-images img');
+  var list = tags.length
+    ? [].map.call(tags, function (im) { return im.getAttribute('src'); })
+    : (d.images || []).map(function (im) { return im.src; });
+  list = list.filter(Boolean);
+  if (!list.length) return;
+  createSlideshow(root, {
+    effect: d.effect || 'crossfade',
+    duration: Number(d.fade),
+    display: Number(d.display) || 4,
+    stripe: d.stripe || {},
+    glitch: d.glitch || {},
+    indicator: d.indicator || {}
+  }).add(list);
+})();</script>
+</body>
+</html>
+" onload="__cardIframeOnload(this)"></iframe></div>
     <div class="card card-html" style="margin-bottom:40px;"><iframe scrolling="no" style="height:60px" sandbox="allow-scripts allow-popups allow-forms allow-same-origin" srcdoc="<!DOCTYPE html>
 <html lang=&quot;ja&quot;>
 <head><style>html, body { margin:0 !important; padding:0 !important; width:100% !important; max-width:none !important; min-height:0 !important; height:auto !important; overflow:hidden !important; -webkit-text-size-adjust:100% !important; text-size-adjust:100% !important; }.page, .site-frame, .wrap { margin:0 !important; padding-top:0 !important; padding-bottom:0 !important; max-width:none !important; width:100% !important; min-height:0 !important; height:auto !important; }body > :last-child { margin-bottom:0 !important; }img, video, iframe { max-width:100% !important; }</style>
