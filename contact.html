@@ -9,11 +9,12 @@
 *{ box-sizing:border-box; }
 body{ background:#FFFFFF; color:#17191A; font-family:'Noto Sans JP',sans-serif; margin:0; padding:0; line-height:1.7; }
 .site-frame{ width:100%; max-width:none; margin:0; }
-.site-header{ display:flex; flex-direction:row; align-items:center; justify-content:space-between; gap:16px; padding:16px 20px 8px; font-size:clamp(9px, 2.2vw, 12px); }
+.site-header{ display:flex; flex-direction:row; align-items:center; justify-content:space-between; gap:16px; padding:12px 20px; font-size:clamp(9px, 2.2vw, 12px); }
 .site-header > div{ line-height:1; white-space:nowrap; }
 .site-header nav{ display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:6px; font-size:clamp(10px, 2.6vw, 14px); margin-top:0; line-height:1; }
-.site-header nav a{ white-space:nowrap; }
-@media (max-width:480px){ .site-header{ gap:8px; padding:12px 10px 6px; } .site-header nav{ gap:4px; } }
+.site-header nav a{ white-space:nowrap; padding:6px 0; border-top:4px solid transparent; border-bottom:4px solid transparent; }
+.site-header nav a.current{ border-bottom-color:#97C15B; }
+@media (max-width:480px){ .site-header{ gap:8px; padding:8px 10px; } .site-header nav{ gap:4px; } }
 header a, footer a{ color:#17191A; text-decoration:none; }
 header a.current, footer a.current{ font-weight:700; }
 .site-body{ padding:0; }
@@ -378,7 +379,7 @@ body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;p
 .heading .txt{font-size:inherit;}
 .heading.size-sm{font-size:13px;}.heading.size-md{font-size:16px;}.heading.size-lg{font-size:20px;}
 .lead{font-weight:700;margin:24px 0 20px;letter-spacing:.01em;}
-.lead.size-xs{font-size:15px;}.lead.size-sm{font-size:18px;}.lead.size-md{font-size:22px;}.lead.size-lg{font-size:27px;}
+.lead.size-xxs{font-size:12px;}.lead.size-xs{font-size:15px;}.lead.size-sm{font-size:18px;}.lead.size-md{font-size:22px;}.lead.size-lg{font-size:27px;}
 .body-wrap{font-size:15px;line-height:1.62;letter-spacing:.01em;}
 .body-wrap p{margin:0 0 20px;}
 .body-wrap p:last-child{margin-bottom:0;}.body-wrap ul,.body-wrap ol{margin:0 0 20px;padding-left:1.5em;}.body-wrap ul{list-style:disc;}.body-wrap ol{list-style:decimal;}.body-wrap li{margin:0 0 12px;display:list-item;}.body-wrap li:last-child{margin-bottom:0;}.body-wrap.line-tight{line-height:1.4;}.body-wrap.line-normal{line-height:1.62;}.body-wrap.line-wide{line-height:2;}
@@ -388,7 +389,7 @@ body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;p
 <div class=&quot;page no-lead&quot;>
   <div class=&quot;heading size-sm&quot;><span class=&quot;sq&quot; aria-hidden=&quot;true&quot;></span><span class=&quot;txt&quot;>CONTACT｜お問い合わせ・ご相談</span></div>
   <div class=&quot;body-wrap size-md line-normal line-normal&quot;>
-<p>ポートフォリオをご覧いただきありがとうございます。<span style=&quot;font-family: inherit; -webkit-text-size-adjust: 100%;&quot;>お仕事のご相談をはじめ、「こういう制作はできる？」といった軽いお問合せやご感想など、どうぞお気軽にご連絡ください。</span></p>
+<p>ポートフォリオをご覧いただきありがとうございます。お仕事のご相談をはじめ、「こういう制作はできる？」といった軽いお問い合わせなど、どうぞお気軽にご連絡ください。</p>
   </div>
 </div>
 </body>
@@ -452,7 +453,7 @@ body{ background:#fff; color:#17191A; font-family:'Noto Sans JP',sans-serif; mar
     <div class=&quot;field radio-group&quot;>
       <label>
         <input type=&quot;checkbox&quot; name=&quot;consent&quot; required=&quot;&quot;>
-        <span class=&quot;opt-text txt&quot;>ご入力いただいたお名前・メールアドレス・メッセージは、外部サービス(Web3Forms)を経由してお問い合わせへの回答目的のみに使用されます。内容にご同意の上、送信してください。</span>
+        <span class=&quot;opt-text txt&quot;>ご入力いただいたお名前・メールアドレス・メッセージは、外部サービス（Web3Forms）を経由して送信され、お問い合わせへの回答のみに使用します。内容をご確認・ご同意の上、送信してください。</span>
       </label>
     </div>
 
@@ -508,7 +509,7 @@ document.getElementById(&quot;contactForm&quot;).addEventListener(&quot;submit&q
 </div></main>
 <footer class="site-footer">
   <nav><a href="index.html">TOP</a> | <a href="career.html">CAREER</a> | <a href="works.html">WORKS</a> | <a href="contact.html" class="current" aria-current="page">CONTACT</a></nav>
-  <div class="sns-row"><a href="https://note.com/keigo_tsuchiya" target="_blank" rel="noopener noreferrer"><img src="images/img_23.jpg" style="height:10px;width:auto;"></a><a href="https://asobiva.i-roiro.com" target="_blank" rel="noopener noreferrer"><img src="images/img_24.jpg" style="height:12px;width:auto;"></a></div>
+  <div class="sns-row"><a href="https://note.com/keigo_tsuchiya" target="_blank" rel="noopener noreferrer"><img src="images/img_23.jpg" style="height:10px;width:auto;"></a></div>
   <div>©    KEIGO TSUCHIYA</div>
 </footer>
 </div>

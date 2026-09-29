@@ -9,11 +9,12 @@
 *{ box-sizing:border-box; }
 body{ background:#FFFFFF; color:#17191A; font-family:'Noto Sans JP',sans-serif; margin:0; padding:0; line-height:1.7; }
 .site-frame{ width:100%; max-width:none; margin:0; }
-.site-header{ display:flex; flex-direction:row; align-items:center; justify-content:space-between; gap:16px; padding:16px 20px 8px; font-size:clamp(9px, 2.2vw, 12px); }
+.site-header{ display:flex; flex-direction:row; align-items:center; justify-content:space-between; gap:16px; padding:12px 20px; font-size:clamp(9px, 2.2vw, 12px); }
 .site-header > div{ line-height:1; white-space:nowrap; }
 .site-header nav{ display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:6px; font-size:clamp(10px, 2.6vw, 14px); margin-top:0; line-height:1; }
-.site-header nav a{ white-space:nowrap; }
-@media (max-width:480px){ .site-header{ gap:8px; padding:12px 10px 6px; } .site-header nav{ gap:4px; } }
+.site-header nav a{ white-space:nowrap; padding:6px 0; border-top:4px solid transparent; border-bottom:4px solid transparent; }
+.site-header nav a.current{ border-bottom-color:#97C15B; }
+@media (max-width:480px){ .site-header{ gap:8px; padding:8px 10px; } .site-header nav{ gap:4px; } }
 header a, footer a{ color:#17191A; text-decoration:none; }
 header a.current, footer a.current{ font-weight:700; }
 .site-body{ padding:0; }
@@ -555,7 +556,7 @@ body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;p
 </div></main>
 <footer class="site-footer">
   <nav><a href="index.html" class="current" aria-current="page">TOP</a> | <a href="career.html">CAREER</a> | <a href="works.html">WORKS</a> | <a href="contact.html">CONTACT</a></nav>
-  <div class="sns-row"><a href="https://note.com/keigo_tsuchiya" target="_blank" rel="noopener noreferrer"><img src="images/img_23.jpg" style="height:10px;width:auto;"></a><a href="https://asobiva.i-roiro.com" target="_blank" rel="noopener noreferrer"><img src="images/img_24.jpg" style="height:12px;width:auto;"></a></div>
+  <div class="sns-row"><a href="https://note.com/keigo_tsuchiya" target="_blank" rel="noopener noreferrer"><img src="images/img_23.jpg" style="height:10px;width:auto;"></a></div>
   <div>©    KEIGO TSUCHIYA</div>
 </footer>
 </div>
