@@ -13,7 +13,7 @@ body{ background:#FFFFFF; color:#17191A; font-family:'Noto Sans JP',sans-serif; 
 .site-header > div{ line-height:1; white-space:nowrap; }
 .site-header nav{ display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:6px; font-size:clamp(10px, 2.6vw, 14px); margin-top:0; line-height:1; }
 .site-header nav a{ white-space:nowrap; padding:6px 0; border-top:4px solid transparent; border-bottom:4px solid transparent; }
-.site-header nav a.current{ border-bottom-color:#97C15B; }
+.site-header nav a.current{ border-bottom-color:#8BC34A; }
 @media (max-width:480px){ .site-header{ gap:8px; padding:8px 10px; } .site-header nav{ gap:4px; } }
 header a, footer a{ color:#17191A; text-decoration:none; }
 header a.current, footer a.current{ font-weight:700; }
@@ -428,26 +428,28 @@ body{ background:#fff; color:#17191A; font-family:'Noto Sans JP',sans-serif; mar
 .result-msg.show{ display:block; }
 .result-msg.success{ background:#EAF7EA; color:#1B5E20; border:1px solid #A5D6A7; }
 .result-msg.error{ background:#FDECEA; color:#B71C1C; border:1px solid #F5C6CB; }
+.alt-contact{ margin-top:18px; text-align:center; font-size:var(--note-size); color:#5B615F; line-height:1.8; }
+.alt-contact .alt-mail{ color:#17191A; font-size:var(--option-size); text-decoration:underline; text-underline-offset:3px; }
 </style>
 </head>
 <body>
 <div class=&quot;page size-md&quot;>
   <div class=&quot;heading size-sm&quot;><span class=&quot;sq&quot;></span><span class=&quot;txt&quot;>お問い合わせフォーム</span></div>
-<form id=&quot;contactForm&quot; __gcruniqueid=&quot;1&quot;>
+<form id=&quot;contactForm&quot;>
     <input type=&quot;hidden&quot; name=&quot;access_key&quot; id=&quot;accessKeyField&quot; value=&quot;055b114e-3c0a-4208-bc0a-b41b9f76290b&quot;>
     <input type=&quot;hidden&quot; name=&quot;subject&quot; id=&quot;subjectField&quot; value=&quot;お問い合わせフォームより送信&quot;>
 
     <div class=&quot;field&quot;>
       <label><span class=&quot;txt&quot;>お名前</span> <span class=&quot;req&quot;>必須</span></label>
-      <input type=&quot;text&quot; name=&quot;name&quot; required=&quot;&quot; __gcruniqueid=&quot;2&quot;>
+      <input type=&quot;text&quot; name=&quot;name&quot; required=&quot;&quot;>
     </div>
     <div class=&quot;field&quot;>
       <label><span class=&quot;txt&quot;>メールアドレス</span> <span class=&quot;req&quot;>必須</span></label>
-      <input type=&quot;email&quot; name=&quot;email&quot; required=&quot;&quot; __gcruniqueid=&quot;3&quot;>
+      <input type=&quot;email&quot; name=&quot;email&quot; required=&quot;&quot;>
     </div>
     <div class=&quot;field&quot;>
       <label><span class=&quot;txt&quot;>メッセージ</span> <span class=&quot;req&quot;>必須</span></label>
-      <textarea name=&quot;message&quot; rows=&quot;5&quot; required=&quot;&quot; __gcruniqueid=&quot;4&quot;></textarea>
+      <textarea name=&quot;message&quot; rows=&quot;5&quot; required=&quot;&quot;></textarea>
     </div>
 
     <div class=&quot;field radio-group&quot;>
@@ -460,6 +462,7 @@ body{ background:#fff; color:#17191A; font-family:'Noto Sans JP',sans-serif; mar
     <button type=&quot;submit&quot; class=&quot;submit-btn&quot; id=&quot;submitBtn&quot;><span class=&quot;txt&quot; id=&quot;submitBtnText&quot;>送信する</span></button>
     <div class=&quot;result-msg&quot; id=&quot;resultMsg&quot;></div>
   </form>
+  <div class=&quot;alt-contact&quot;><span class=&quot;txt&quot;>フォームから送信できない場合は、こちらのアドレスへ直接ご連絡ください。</span><br><a class=&quot;alt-mail&quot; id=&quot;altMail&quot; data-u=&quot;contact&quot; data-d=&quot;i-roiro.com&quot; href=&quot;#&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;></a></div>
 </div>
 <script>
 function notifyParentResize(){
@@ -502,6 +505,13 @@ document.getElementById(&quot;contactForm&quot;).addEventListener(&quot;submit&q
       notifyParentResize();
     });
 });
+(function(){
+  var a = document.getElementById(&quot;altMail&quot;);
+  if(!a) return;
+  var m = a.getAttribute(&quot;data-u&quot;) + String.fromCharCode(64) + a.getAttribute(&quot;data-d&quot;);
+  a.textContent = m;
+  a.href = &quot;mai&quot; + &quot;lto:&quot; + m;
+})();
 </script>
 
 </body>
