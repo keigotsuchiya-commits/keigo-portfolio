@@ -536,6 +536,15 @@ body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;p
   .item + .item{ border-top:1px solid var(--text); }
   .title{ font-size:15px; font-weight:700; margin-bottom:4px; outline:none; min-height:1.4em; overflow-wrap:break-word; word-break:break-word; }
   .desc{ font-size:13px; color:var(--text-muted); outline:none; min-height:1.4em; overflow-wrap:break-word; word-break:break-word; }
+  /* 説明が空の項目は、タイトル下の余白を残さない */
+  .title:last-child{ margin-bottom:0; }
+
+  /* 表の下の注記。間隔は gap-* クラスで指定(表の下余白20pxと相殺して表示上の間隔になる) */
+  .note{ font-size:12px; color:var(--text-muted); line-height:1.7; outline:none; overflow-wrap:break-word; word-break:break-word; margin:-12px 0 20px; }
+  .note.gap-4{ margin-top:-16px; }
+  .note.gap-8{ margin-top:-12px; }
+  .note.gap-12{ margin-top:-8px; }
+  .note.gap-16{ margin-top:-4px; }
 
   .align-left{ text-align:left; }
   .align-center{ text-align:center; }
@@ -579,7 +588,7 @@ body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;p
     <div class=&quot;items&quot;>
       <div class=&quot;item&quot;>
         <div class=&quot;title size-sm&quot;>PSP®「LocoRoco®」</div>
-        <div class=&quot;desc size-sm&quot;>企画、アートディレクション、コンセプトアート、各種デザイン、プロモーション素材制作など。2006年、BAFTA Games Awards Character部門を受賞。</div>
+        <div class=&quot;desc size-sm&quot;>企画・アートディレクション・コンセプトアート・各デザイン・パブ素材のデザインなど。2006年、英国アカデミー賞BAFTA Video Game Awardsキャラクター部門を受賞。</div>
       </div>
     </div>
   </div>
@@ -696,6 +705,7 @@ body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;p
     </div>
   </div>
   </div>
+  <div class=&quot;note gap-12&quot;>※上記のほか、未発表・開発中止となった新規タイトルおよびプロトタイプの開発に多数携わっております(非公開)。</div>
   <div class=&quot;heading size-sm&quot;>■ 株式会社ラセングルでの実績 ( 2022-2026 )</div>
   <div class=&quot;table&quot;>
   <div class=&quot;group-row&quot;>
@@ -703,19 +713,18 @@ body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;p
     <div class=&quot;items&quot;>
       <div class=&quot;item&quot;>
         <div class=&quot;title size-sm&quot;>Fate/Grand Order</div>
-        <div class=&quot;desc size-sm&quot;>マップ班にてアート素材制作を担当</div>
+        <div class=&quot;desc size-sm&quot;>マップ班にてアート素材制作業務を担当</div>
       </div>
       <div class=&quot;item&quot;>
         <div class=&quot;title size-sm&quot;>新規プロジェクト(非公開)</div>
-        <div class=&quot;desc size-sm&quot;>アートディレクターを担当</div>
+        <div class=&quot;desc size-sm&quot;>アートディレクターとしてアサイン。</div>
       </div>
       <div class=&quot;item&quot;>
         <div class=&quot;title size-sm&quot;>新規プロジェクト(非公開)</div>
-        <div class=&quot;desc size-sm&quot;>エネミーアートリードを担当。コンセプトアート制作、3Dモデルのアート監修・フィードバックなど</div>
+        <div class=&quot;desc size-sm&quot;>エネミーアート リードとしてアサイン。コンセプトアート、3Dモデルのフィードバックなどを担当</div>
       </div>
       <div class=&quot;item&quot;>
         <div class=&quot;title size-sm&quot;>社内向け画力向上カリキュラムの設計</div>
-        <div class=&quot;desc size-sm&quot;></div>
       </div>
     </div>
   </div>
@@ -800,7 +809,7 @@ body{background:#fff;color:#111;font-family:'Noto Sans JP',sans-serif;margin:0;p
 </div></main>
 <footer class="site-footer">
   <nav><a href="index.html">TOP</a> | <a href="career.html" class="current" aria-current="page">CAREER</a> | <a href="works.html">WORKS</a> | <a href="contact.html">CONTACT</a></nav>
-  <div class="sns-row"><a href="https://note.com/keigo_tsuchiya" target="_blank" rel="noopener noreferrer"><img src="images/img_23.jpg" style="height:10px;width:auto;"></a></div>
+  <div class="sns-row"></div>
   <div>©    KEIGO TSUCHIYA</div>
 </footer>
 </div>
