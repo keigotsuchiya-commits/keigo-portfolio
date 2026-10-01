@@ -11,6 +11,8 @@ body{ background:#FFFFFF; color:#17191A; font-family:'Noto Sans JP',sans-serif; 
 .site-frame{ width:100%; max-width:none; margin:0; }
 .site-header{ display:flex; flex-direction:row; align-items:center; justify-content:space-between; gap:16px; padding:12px 20px; font-size:clamp(9px, 2.2vw, 12px); }
 .site-header > div{ line-height:1; white-space:nowrap; }
+.site-header .site-brand{ display:flex; align-items:center; gap:0.4em; }
+.site-header .logo-mark{ display:block; flex:none; width:1em; height:1em; object-fit:contain; }
 .site-header nav{ display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:6px; font-size:clamp(10px, 2.6vw, 14px); margin-top:0; line-height:1; }
 .site-header nav a{ white-space:nowrap; padding:6px 0; border-top:4px solid transparent; border-bottom:4px solid transparent; }
 .site-header nav a.current{ border-bottom-color:#8BC34A; }
@@ -118,7 +120,7 @@ window.addEventListener("orientationchange", __cardOnViewportChange, {passive:tr
 <body>
 <div class="site-frame">
 <header class="site-header">
-  <div>KEIGO TSUCHIYA | Portfolio</div>
+  <div class="site-brand"><img class="logo-mark" src="images/IMG_5012.png" alt=""><span>KEIGO TSUCHIYA | Portfolio</span></div>
   <nav><a href="index.html" class="current" aria-current="page">TOP</a> | <a href="career.html">CAREER</a> | <a href="works.html">WORKS</a> | <a href="contact.html">CONTACT</a></nav>
 </header>
 <main class="site-body"><div class="card-list">

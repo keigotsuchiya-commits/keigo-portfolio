@@ -11,6 +11,8 @@ body{ background:#FFFFFF; color:#17191A; font-family:'Noto Sans JP',sans-serif; 
 .site-frame{ width:100%; max-width:none; margin:0; }
 .site-header{ display:flex; flex-direction:row; align-items:center; justify-content:space-between; gap:16px; padding:12px 20px; font-size:clamp(9px, 2.2vw, 12px); }
 .site-header > div{ line-height:1; white-space:nowrap; }
+.site-header .site-brand{ display:flex; align-items:center; gap:0.4em; }
+.site-header .logo-mark{ display:block; flex:none; width:1em; height:1em; object-fit:contain; }
 .site-header nav{ display:flex; align-items:center; justify-content:flex-end; flex-wrap:wrap; gap:6px; font-size:clamp(10px, 2.6vw, 14px); margin-top:0; line-height:1; }
 .site-header nav a{ white-space:nowrap; padding:6px 0; border-top:4px solid transparent; border-bottom:4px solid transparent; }
 .site-header nav a.current{ border-bottom-color:#8BC34A; }
@@ -118,7 +120,7 @@ window.addEventListener("orientationchange", __cardOnViewportChange, {passive:tr
 <body>
 <div class="site-frame">
 <header class="site-header">
-  <div>KEIGO TSUCHIYA | Portfolio</div>
+  <div class="site-brand"><img class="logo-mark" src="images/IMG_5012.png" alt=""><span>KEIGO TSUCHIYA | Portfolio</span></div>
   <nav><a href="index.html">TOP</a> | <a href="career.html">CAREER</a> | <a href="works.html">WORKS</a> | <a href="contact.html" class="current" aria-current="page">CONTACT</a></nav>
 </header>
 <main class="site-body"><div class="card-list">
@@ -145,12 +147,11 @@ html,body{margin:0;padding:0}
 <body>
 <div class=&quot;ss&quot; id=&quot;ss&quot;></div>
 <div id=&quot;ss-images&quot; hidden style=&quot;display:none&quot;>
-<img src=&quot;images/slideshow_(5)_img1.jpg&quot; alt=&quot;&quot; data-name=&quot;7EF2D907-4F75-406E-9961-B373A479B24C.png&quot;>
-<img src=&quot;images/slideshow_(5)_img2.jpg&quot; alt=&quot;&quot; data-name=&quot;68C86E82-B405-439D-A898-EE0E87402D20.jpeg&quot;>
-<img src=&quot;images/slideshow_(5)_img3.jpg&quot; alt=&quot;&quot; data-name=&quot;21536A3F-894D-4666-A196-62BA09F7466F.png&quot;>
-<img src=&quot;images/slideshow_(5)_img4.jpg&quot; alt=&quot;&quot; data-name=&quot;09B6C7E8-6F01-497B-97DE-40D3B2879FB0.png&quot;>
+<img src=&quot;images/slideshow_(9)_img1.jpg&quot; alt=&quot;&quot; data-name=&quot;IMG_5039.png&quot;>
+<img src=&quot;images/slideshow_(9)_img2.jpg&quot; alt=&quot;&quot; data-name=&quot;IMG_5038.png&quot;>
+<img src=&quot;images/slideshow_(9)_img3.jpg&quot; alt=&quot;&quot; data-name=&quot;IMG_5041.png&quot;>
 </div>
-<script type=&quot;application/json&quot; id=&quot;slideshow-data&quot;>{&quot;format&quot;:&quot;fade-slideshow&quot;,&quot;version&quot;:3,&quot;title&quot;:&quot;Slideshow&quot;,&quot;display&quot;:30,&quot;fade&quot;:1.2,&quot;effect&quot;:&quot;crossfade&quot;,&quot;stripe&quot;:{&quot;count&quot;:12,&quot;dir&quot;:&quot;h&quot;,&quot;enter&quot;:&quot;start&quot;,&quot;order&quot;:&quot;start&quot;},&quot;glitch&quot;:{&quot;strength&quot;:&quot;mid&quot;,&quot;rgb&quot;:true,&quot;scan&quot;:true},&quot;loop&quot;:true,&quot;aspect&quot;:&quot;3:1&quot;,&quot;indicator&quot;:{&quot;show&quot;:true,&quot;pos&quot;:&quot;bottom-center&quot;,&quot;active&quot;:&quot;#ffffff&quot;,&quot;inactive&quot;:&quot;#ffffff&quot;},&quot;images&quot;:[{&quot;name&quot;:&quot;7EF2D907-4F75-406E-9961-B373A479B24C.png&quot;},{&quot;name&quot;:&quot;68C86E82-B405-439D-A898-EE0E87402D20.jpeg&quot;},{&quot;name&quot;:&quot;21536A3F-894D-4666-A196-62BA09F7466F.png&quot;},{&quot;name&quot;:&quot;09B6C7E8-6F01-497B-97DE-40D3B2879FB0.png&quot;}]}</script>
+<script type=&quot;application/json&quot; id=&quot;slideshow-data&quot;>{&quot;format&quot;:&quot;fade-slideshow&quot;,&quot;version&quot;:3,&quot;title&quot;:&quot;Slideshow&quot;,&quot;display&quot;:20,&quot;fade&quot;:1.2,&quot;effect&quot;:&quot;crossfade&quot;,&quot;stripe&quot;:{&quot;count&quot;:12,&quot;dir&quot;:&quot;h&quot;,&quot;enter&quot;:&quot;start&quot;,&quot;order&quot;:&quot;start&quot;},&quot;glitch&quot;:{&quot;strength&quot;:&quot;mid&quot;,&quot;rgb&quot;:true,&quot;scan&quot;:true},&quot;loop&quot;:true,&quot;aspect&quot;:&quot;3:1&quot;,&quot;indicator&quot;:{&quot;show&quot;:false,&quot;pos&quot;:&quot;bottom-center&quot;,&quot;active&quot;:&quot;#ffffff&quot;,&quot;inactive&quot;:&quot;#ffffff&quot;},&quot;images&quot;:[{&quot;name&quot;:&quot;IMG_5039.png&quot;},{&quot;name&quot;:&quot;IMG_5038.png&quot;},{&quot;name&quot;:&quot;IMG_5041.png&quot;}]}</script>
 <script>function createSlideshow(root, cfg) {
   var EFFECTS = ['crossfade', 'stripe', 'glitch'];
   var base = document.createElement('img');
